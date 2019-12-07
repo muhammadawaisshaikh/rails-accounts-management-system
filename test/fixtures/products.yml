@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  stock: 
+  retailPrice: 
+  vendor: one
+
+two:
+  name: MyString
+  stock: 
+  retailPrice: 
+  vendor: two

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  type: 
+  toFrom: MyString
+  amount: 
+  status: MyString
+
+two:
+  date: MyString
+  type: 
+  toFrom: MyString
+  amount: 
+  status: MyString

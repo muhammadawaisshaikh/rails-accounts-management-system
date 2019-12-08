@@ -8,13 +8,10 @@ rails new accounting-management-system --database=postgresql
 rails db:create
 
 # Making Controllers and views with scaffold
-ails g controller super_admin/admin index show new create edit update destroy
+rails g controller super_admin/admin index show new create edit update destroy
 
 # Model Creation Sample (Auto foreign key and association created)
 rails g model Product name:string description:text amount:integer admin:references
-
-# Making Controllers and views with scaffold
-rails g controller super_admin/admin index show new create edit update destroy
 
 # removing columns from table using migration
 rails generate migration RemoveAdminIdFromAnimals admin_id:bigint

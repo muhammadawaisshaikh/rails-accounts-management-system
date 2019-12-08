@@ -1,0 +1,26 @@
+<%= form_for :product, url: product_path, html: {method: :put} do |form| %>
+    
+    <div class="row pb-4">
+        <div class="col">
+            <%= form.label :name %>
+            <%= form.text_field :name, class: 'form-control', placeholder: 'Name' %>
+        </div>
+        <div class="col">
+            <%= form.label :stock %>
+            <%= form.text_field :stock, class: 'form-control', placeholder: 'Stock #' %>
+        </div>
+    </div>
+    <div class="row pb-4">
+        <div class="col">
+            <%= form.label :retailPrice %>
+            <%= form.text_field :retailPrice, class: 'form-control', placeholder: 'Retail Price #' %>
+        </div>
+        <div class="col">
+            <%= form.label :vendor_id %>
+            <%= form.text_field :vendor_id, class: 'form-control', placeholder: 'Vendor Id' %>
+        </div>
+    </div>
+
+    <%= form.submit class: 'btn btn-success', value: 'Update Product' %>
+    <%= link_to "Cancel", product_index_path, :class=>'btn btn-warning' %>
+<% end %>

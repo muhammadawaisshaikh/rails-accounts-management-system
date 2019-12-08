@@ -1,2 +1,32 @@
-<h1>Journal#new</h1>
-<p>Find me in app/views/journal/new.html.erb</p>
+<h1 class="py-4">New Journal</h1>
+
+<form>
+    <div class="row pb-4">
+        <div class="col">
+            <label>Reference</label>
+            <input type="text" class="form-control" placeholder="Reference">
+        </div>
+        <div class="col">
+            <label>Date</label>
+            <input type="text" class="form-control" placeholder="Date">
+        </div>
+    </div>
+    <div class="row pb-4">
+        <div class="col">
+            <label>Summary</label>
+            <input type="text" class="form-control" placeholder="Summary">
+        </div>
+    </div>
+    <div class="row pb-4">
+        <div class="col">
+            <label>Amount</label>
+            <input type="text" class="form-control" placeholder="Amount">
+        </div>
+    </div>
+
+    <div class="row">
+        <button type="button" class="btn btn-success mx-2">Add New</button>
+        <button type="button" class="btn btn-warning mx-2">Cancel</button>
+    </div>
+
+</form>

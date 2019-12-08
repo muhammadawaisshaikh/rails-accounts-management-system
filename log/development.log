@@ -1502,3 +1502,822 @@ Processing by JournalController#new as HTML
 Completed 200 OK in 90ms (Views: 86.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/journal/new" for ::1 at 2019-12-08 11:54:52 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (0.4ms)
+  Rendered journal/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/new" for ::1 at 2019-12-08 11:54:53 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (0.7ms)
+  Rendered journal/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 82ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/new" for ::1 at 2019-12-08 11:57:49 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (5.9ms)
+  Rendered journal/new.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"journal"}, missing required keys: [:id]):
+    1: <%= form_for :journal, url: journal_path, html: {method: :post} do |form| %>
+    2: 
+    3:     <div class="row pb-4">
+    4:         <div class="col">
+  
+app/views/journal/_insertForm.html.erb:1:in `_app_views_journal__insert_orm_html_erb___351670992029750641_69952575746240'
+app/views/journal/new.html.erb:3:in `_app_views_journal_new_html_erb___1018701887678984126_69952575872200'
+Started GET "/journal/new" for ::1 at 2019-12-08 11:57:57 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (248.9ms)
+  Rendered journal/new.html.erb within layouts/application (252.7ms)
+Completed 500 Internal Server Error in 263ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `journals_path' for #<#<Class:0x00007f3e3580a6e0>:0x00007f3e35841a00>
+Did you mean?  journal_path):
+    1: <%= form_for :journal, url: journals_path, html: {method: :post} do |form| %>
+    2: 
+    3:     <div class="row pb-4">
+    4:         <div class="col">
+  
+app/views/journal/_insertForm.html.erb:1:in `_app_views_journal__insert_orm_html_erb___351670992029750641_69952669454300'
+app/views/journal/new.html.erb:3:in `_app_views_journal_new_html_erb___1018701887678984126_69952581276440'
+Started GET "/journal/new" for ::1 at 2019-12-08 11:58:06 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (114.0ms)
+  Rendered journal/new.html.erb within layouts/application (119.7ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 200ms (Views: 195.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/new" for ::1 at 2019-12-08 11:59:34 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (4.1ms)
+  Rendered journal/new.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 93ms (Views: 89.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/new" for ::1 at 2019-12-08 11:59:52 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (4.6ms)
+  Rendered journal/new.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 65ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/new" for ::1 at 2019-12-08 12:00:18 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (46.3ms)
+  Rendered journal/new.html.erb within layouts/application (49.8ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 115ms (Views: 110.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/new" for ::1 at 2019-12-08 12:00:26 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (3.5ms)
+  Rendered journal/new.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 80ms (Views: 75.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/new" for ::1 at 2019-12-08 12:00:46 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (6.7ms)
+  Rendered journal/new.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 75ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/new" for ::1 at 2019-12-08 12:01:33 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (7.4ms)
+  Rendered journal/new.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 80ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/new" for ::1 at 2019-12-08 12:01:34 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (5.6ms)
+  Rendered journal/new.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 75ms (Views: 71.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/new" for ::1 at 2019-12-08 12:01:34 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (2.5ms)
+  Rendered journal/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/new" for ::1 at 2019-12-08 12:01:55 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (3.6ms)
+  Rendered journal/new.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/awais/Projects/rails-accounts-management-system/app/views/journal/_insertForm.html.erb:29: syntax error, unexpected tLABEL, expecting '='
+...er.append=( form.submit, class: 'form-control' );@output_buf...
+...                         ^~~~~~):
+  
+app/views/journal/_insertForm.html.erb:29: syntax error, unexpected tLABEL, expecting '='
+app/views/journal/new.html.erb:3:in `_app_views_journal_new_html_erb___1018701887678984126_69952536863060'
+Started GET "/journal/new" for ::1 at 2019-12-08 12:02:01 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (5.6ms)
+  Rendered journal/new.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 74ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/new" for ::1 at 2019-12-08 12:02:34 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (8.0ms)
+  Rendered journal/new.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 85ms (Views: 80.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/new" for ::1 at 2019-12-08 12:02:53 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (9.8ms)
+  Rendered journal/new.html.erb within layouts/application (16.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 67ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/new" for ::1 at 2019-12-08 12:03:09 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (5.2ms)
+  Rendered journal/new.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 70ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/journal" for ::1 at 2019-12-08 12:04:25 +0500
+Processing by JournalController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m3dPN8T2dgQHP7+oAKU6qg1z4xIKIUvRYIaHRlrCNfn49AknSz7Tjq/tf6I6mhdNV01FHd+Amc09B9yyB8Thow==", "journal"=>{"reference"=>"2", "date"=>"12-03-2019", "summary"=>"asdf", "amount"=>"2500"}, "commit"=>"Add New"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/journal_controller.rb:15
+  [1m[36mJournal Create (23.0ms)[0m  [1m[32mINSERT INTO "journals" ("reference", "date", "summary", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["reference", "2"], ["date", "12-03-2019"], ["summary", "asdf"], ["amount", 2500], ["created_at", "2019-12-08 07:04:25.958487"], ["updated_at", "2019-12-08 07:04:25.958487"]]
+  ↳ app/controllers/journal_controller.rb:15
+  [1m[35m (11.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/journal_controller.rb:15
+Redirected to http://localhost:3000/journal/1
+Completed 302 Found in 108ms (ActiveRecord: 52.9ms)
+
+
+Started GET "/journal/1" for ::1 at 2019-12-08 12:04:26 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 81ms (Views: 75.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/" for ::1 at 2019-12-08 12:04:35 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (2.5ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:3
+  Rendered journal/index.html.erb within layouts/application (54.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 97ms (Views: 91.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/journal/" for ::1 at 2019-12-08 12:06:40 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (1.1ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/awais/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/awais/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/awais/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/awais/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/awais/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/awais/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/awais/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/awais/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  Rendered journal/index.html.erb within layouts/application (288.1ms)
+Completed 500 Internal Server Error in 298ms (ActiveRecord: 2.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `journal' for #<#<Class:0x00007f3e3580a6e0>:0x00007f3e34ff1828>
+Did you mean?  @journals):
+    1: <h1 class="py-4">All Journals</h1>
+    2: 
+    3: 
+    4:     <p><%= journal.reference %></p>
+    5: 
+    6: 
+    7: <table class="table table-striped">
+  
+app/views/journal/index.html.erb:4:in `_app_views_journal_index_html_erb__1031168192126493590_69952576920020'
+Started GET "/journal/" for ::1 at 2019-12-08 12:06:48 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (1.1ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:15
+  Rendered journal/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 74ms (Views: 69.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/journal/" for ::1 at 2019-12-08 12:07:42 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (1.2ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:15
+  Rendered journal/index.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 92ms (Views: 87.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/journal/" for ::1 at 2019-12-08 12:08:00 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.8ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:15
+  Rendered journal/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 83ms (Views: 78.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/journal/1" for ::1 at 2019-12-08 12:10:46 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 62ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/1" for ::1 at 2019-12-08 12:11:14 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 66ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/1" for ::1 at 2019-12-08 12:11:25 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 86ms (Views: 81.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/1" for ::1 at 2019-12-08 12:11:33 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 74ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/journal/1" for ::1 at 2019-12-08 12:13:10 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"journal", :id=>nil}, missing required keys: [:id]):
+     6:     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+     7:     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+     8:     
+     9:     <%= link_to "Edit Journal Details", edit_journal_path(@journal), class: "btn btn-info" %>
+    10:     <%= link_to "Delete Journal Details", journal_path(@journal), class: "btn btn-danger" , method: :delete, data: {confirm: "Are you sure?"} %>
+    11: 
+    12:   </div>
+  
+app/views/journal/show.html.erb:9:in `_app_views_journal_show_html_erb___1225095357997744287_69952609364220'
+Started GET "/journal/1" for ::1 at 2019-12-08 12:13:22 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"journal", :id=>nil}, missing required keys: [:id]):
+     6:     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+     7:     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+     8:     
+     9:     <%= link_to "Edit Journal Details", edit_journal_path(@journal), class: "btn btn-info" %>
+    10:     <%= link_to "Delete Journal Details", journal_path(@journal), class: "btn btn-danger" , method: :delete, data: {confirm: "Are you sure?"} %>
+    11: 
+    12:   </div>
+  
+app/views/journal/show.html.erb:9:in `_app_views_journal_show_html_erb___1225095357997744287_69952535527360'
+Started GET "/journal/1" for ::1 at 2019-12-08 12:13:42 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (130.6ms)
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_journals_path' for #<#<Class:0x00007f3e3580a6e0>:0x00000000031ea750>
+Did you mean?  edit_journal_path
+               edit_journal_url
+               new_journal_path):
+     6:     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+     7:     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+     8:     
+     9:     <%= link_to "Edit Journal Details", edit_journals_path(@journal), class: "btn btn-info" %>
+    10:     <%= link_to "Delete Journal Details", journals_path(@journal), class: "btn btn-danger" , method: :delete, data: {confirm: "Are you sure?"} %>
+    11: 
+    12:   </div>
+  
+app/views/journal/show.html.erb:9:in `_app_views_journal_show_html_erb___1225095357997744287_26127280'
+Started GET "/journal/1" for ::1 at 2019-12-08 12:13:57 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"journal", :id=>nil}, missing required keys: [:id]):
+     6:     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+     7:     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+     8:     
+     9:     <%= link_to "Edit Journal Details", edit_journal_path(@journal), class: "btn btn-info" %>
+    10:     <%= link_to "Delete Journal Details", journal_path(@journal), class: "btn btn-danger" , method: :delete, data: {confirm: "Are you sure?"} %>
+    11: 
+    12:   </div>
+  
+app/views/journal/show.html.erb:9:in `_app_views_journal_show_html_erb___1225095357997744287_69952578853940'
+Started GET "/journal/" for ::1 at 2019-12-08 12:14:09 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.4ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:15
+  Rendered journal/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/journal/1" for ::1 at 2019-12-08 12:14:12 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"journal", :id=>nil}, missing required keys: [:id]):
+     6:     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+     7:     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+     8:     
+     9:     <%= link_to "Edit Journal Details", edit_journal_path(@journal), class: "btn btn-info" %>
+    10:     <%= link_to "Delete Journal Details", journal_path(@journal), class: "btn btn-danger" , method: :delete, data: {confirm: "Are you sure?"} %>
+    11: 
+    12:   </div>
+  
+app/views/journal/show.html.erb:9:in `_app_views_journal_show_html_erb___1225095357997744287_69952535305380'
+Started GET "/journal/" for ::1 at 2019-12-08 12:14:50 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.4ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:15
+  Rendered journal/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/journal/" for ::1 at 2019-12-08 12:16:19 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (2.0ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:15
+  Rendered journal/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 78ms (Views: 71.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/journal/" for ::1 at 2019-12-08 12:16:48 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.5ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:15
+  Rendered journal/index.html.erb within layouts/application (14.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 43ms (Views: 34.2ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/journal/1" for ::1 at 2019-12-08 12:16:51 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJournal Load (0.7ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:7
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (190.5ms)
+Completed 500 Internal Server Error in 239ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `journal' for #<#<Class:0x00007f3e30152258>:0x00007f3e35e92300>
+Did you mean?  @journal):
+    2: 
+    3: <div class="card">
+    4:   <div class="card-body">
+    5:     <h5 class="card-title"><%= journal.reference %> | <%= journal.amount %></h5>
+    6:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.date %></h6>
+    7:     <p class="card-text"><%= journal.summary %></p>
+    8:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.created_at %></h6>
+  
+app/views/journal/show.html.erb:5:in `_app_views_journal_show_html_erb___1225095357997744287_69952584586780'
+Started GET "/journal/1" for ::1 at 2019-12-08 12:18:13 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJournal Load (0.8ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:7
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (242.2ms)
+Completed 500 Internal Server Error in 254ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `journal' for #<#<Class:0x00007f3e30152258>:0x00007f3e352fd260>
+Did you mean?  @journal):
+    2: 
+    3: <div class="card">
+    4:   <div class="card-body">
+    5:     <h5 class="card-title"><%= journal.reference %> | <%= journal.amount %></h5>
+    6:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.date %></h6>
+    7:     <p class="card-text"><%= journal.summary %></p>
+    8:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.created_at %></h6>
+  
+app/views/journal/show.html.erb:5:in `_app_views_journal_show_html_erb___1225095357997744287_69952578516400'
+Started GET "/journal/1" for ::1 at 2019-12-08 12:18:30 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJournal Load (0.9ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:7
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (284.1ms)
+Completed 500 Internal Server Error in 304ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `journals' for #<#<Class:0x00007f3e30152258>:0x00007f3e2c057aa0>
+Did you mean?  @journal):
+    2: 
+    3: <div class="card">
+    4:   <div class="card-body">
+    5:     <h5 class="card-title"><%= journals.reference %> | <%= journal.amount %></h5>
+    6:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.date %></h6>
+    7:     <p class="card-text"><%= journal.summary %></p>
+    8:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.created_at %></h6>
+  
+app/views/journal/show.html.erb:5:in `_app_views_journal_show_html_erb___1225095357997744287_69952669459740'
+Started GET "/journal/1" for ::1 at 2019-12-08 12:18:34 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJournal Load (1.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:7
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (248.5ms)
+Completed 500 Internal Server Error in 264ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `journal' for #<#<Class:0x00007f3e30152258>:0x00007f3e3806ebe0>
+Did you mean?  @journal):
+    2: 
+    3: <div class="card">
+    4:   <div class="card-body">
+    5:     <h5 class="card-title"><%= journal.reference %> | <%= journal.amount %></h5>
+    6:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.date %></h6>
+    7:     <p class="card-text"><%= journal.summary %></p>
+    8:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.created_at %></h6>
+  
+app/views/journal/show.html.erb:5:in `_app_views_journal_show_html_erb___1225095357997744287_69952602341300'
+Started GET "/journal/1" for ::1 at 2019-12-08 12:20:03 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJournal Load (0.4ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:7
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (202.1ms)
+Completed 500 Internal Server Error in 217ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `journal' for #<#<Class:0x00007f3e38ed75b0>:0x00007f3e38ed5828>
+Did you mean?  @journal):
+    2: 
+    3: <div class="card">
+    4:   <div class="card-body">
+    5:     <h5 class="card-title"><%= journal.reference %> | <%= journal.amount %></h5>
+    6:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.date %></h6>
+    7:     <p class="card-text"><%= journal.summary %></p>
+    8:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.created_at %></h6>
+  
+app/views/journal/show.html.erb:5:in `_app_views_journal_show_html_erb___1225095357997744287_69952609894220'
+Started GET "/journal/1" for ::1 at 2019-12-08 12:20:50 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJournal Load (0.3ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:7
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (196.0ms)
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `journal' for #<#<Class:0x00007f3e302e8928>:0x00007f3e302e2ca8>
+Did you mean?  @journal):
+    2: 
+    3: <div class="card">
+    4:   <div class="card-body">
+    5:     <h5 class="card-title"><%= journal.reference %> | <%= journal.amount %></h5>
+    6:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.date %></h6>
+    7:     <p class="card-text"><%= journal.summary %></p>
+    8:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.created_at %></h6>
+  
+app/views/journal/show.html.erb:5:in `_app_views_journal_show_html_erb___1225095357997744287_69952536529100'
+Started GET "/journal/1" for ::1 at 2019-12-08 12:21:32 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJournal Load (0.3ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:7
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (203.3ms)
+Completed 500 Internal Server Error in 223ms (ActiveRecord: 4.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `journal' for #<#<Class:0x00007f3e3017e100>:0x00007f3e3017c6e8>
+Did you mean?  @journal):
+    2: 
+    3: <div class="card">
+    4:   <div class="card-body">
+    5:     <h5 class="card-title"><%= journal.reference %> | <%= journal.amount %></h5>
+    6:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.date %></h6>
+    7:     <p class="card-text"><%= journal.summary %></p>
+    8:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.created_at %></h6>
+  
+app/views/journal/show.html.erb:5:in `_app_views_journal_show_html_erb___1225095357997744287_69952535787400'
+Started GET "/journal/" for ::1 at 2019-12-08 12:23:16 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (1.8ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:15
+  Rendered journal/index.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 62ms (Views: 57.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/journal/new" for ::1 at 2019-12-08 12:23:18 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (12.6ms)
+  Rendered journal/new.html.erb within layouts/application (16.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 74ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/journal" for ::1 at 2019-12-08 12:23:23 +0500
+Processing by JournalController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEHMQOOcaZTglh46+uDCQlPpTkb+FL8FnQdzkZwjRj0tSuwr6ohVBBmAEyW5wjJz+/JGLKPR73BJ4GZO3WDg9Q==", "journal"=>{"reference"=>"3", "date"=>"12-03-2019", "summary"=>"asdf", "amount"=>"2500"}, "commit"=>"Add New"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/journal_controller.rb:17
+  [1m[36mJournal Create (1.0ms)[0m  [1m[32mINSERT INTO "journals" ("reference", "date", "summary", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["reference", "3"], ["date", "12-03-2019"], ["summary", "asdf"], ["amount", 2500], ["created_at", "2019-12-08 07:23:23.965307"], ["updated_at", "2019-12-08 07:23:23.965307"]]
+  ↳ app/controllers/journal_controller.rb:17
+  [1m[35m (60.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/journal_controller.rb:17
+Redirected to http://localhost:3000/journal/2
+Completed 302 Found in 73ms (ActiveRecord: 62.0ms)
+
+
+Started GET "/journal/2" for ::1 at 2019-12-08 12:23:24 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJournal Load (0.2ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:7
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (211.4ms)
+Completed 500 Internal Server Error in 215ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `journal' for #<#<Class:0x00007f3e3017e100>:0x00007f3e35097cf0>
+Did you mean?  @journal):
+    2: 
+    3: <div class="card">
+    4:   <div class="card-body">
+    5:     <h5 class="card-title"><%= journal.reference %> | <%= journal.amount %></h5>
+    6:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.date %></h6>
+    7:     <p class="card-text"><%= journal.summary %></p>
+    8:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.created_at %></h6>
+  
+app/views/journal/show.html.erb:5:in `_app_views_journal_show_html_erb___1225095357997744287_69952577276480'
+Started GET "/journal/" for ::1 at 2019-12-08 12:23:32 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (2.2ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:15
+  Rendered journal/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 52ms (Views: 45.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/journal/" for ::1 at 2019-12-08 12:26:59 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.5ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:15
+  Rendered journal/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 35ms (Views: 30.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/journal/1" for ::1 at 2019-12-08 12:27:02 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJournal Load (1.4ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:7
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (237.2ms)
+Completed 500 Internal Server Error in 251ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `journal' for #<#<Class:0x00007f3e303daa70>:0x00007f3e301d9190>
+Did you mean?  @journal):
+    2: 
+    3: <div class="card">
+    4:   <div class="card-body">
+    5:     <h5 class="card-title"><%= journal.reference %> | <%= journal.amount %></h5>
+    6:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.date %></h6>
+    7:     <p class="card-text"><%= journal.summary %></p>
+    8:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.created_at %></h6>
+  
+app/views/journal/show.html.erb:5:in `_app_views_journal_show_html_erb___1225095357997744287_69952535973720'
+Started GET "/journal/1" for ::1 at 2019-12-08 12:27:12 +0500
+Processing by JournalController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJournal Load (0.4ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:7
+  Rendering journal/show.html.erb within layouts/application
+  Rendered journal/show.html.erb within layouts/application (231.4ms)
+Completed 500 Internal Server Error in 261ms (ActiveRecord: 6.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `journal' for #<#<Class:0x00007f3e3504e438>:0x00007f3e35041a80>
+Did you mean?  @journal):
+    2: 
+    3: <div class="card">
+    4:   <div class="card-body">
+    5:     <h5 class="card-title"><%= journal.reference %> | <%= journal.amount %></h5>
+    6:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.date %></h6>
+    7:     <p class="card-text"><%= journal.summary %></p>
+    8:     <h6 class="card-subtitle mb-2 text-muted"><%= journal.created_at %></h6>
+  
+app/views/journal/show.html.erb:5:in `_app_views_journal_show_html_erb___1225095357997744287_69952577128500'
+Started GET "/journal/" for ::1 at 2019-12-08 12:28:03 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.3ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:15
+  Rendered journal/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 37ms (Views: 30.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/journal/new" for ::1 at 2019-12-08 12:28:07 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (14.3ms)
+  Rendered journal/new.html.erb within layouts/application (18.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 75ms (Views: 71.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/journal" for ::1 at 2019-12-08 12:28:14 +0500
+Processing by JournalController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r4zq6OVuKqj0hKFE7u6spfkWw3kuvE+YNWNOmmFvOtW+h8qD7HoWOA2SrFutzFyUUQ3LE3N5H+3hhFtFICycHQ==", "journal"=>{"reference"=>"4", "date"=>"12-03-2019", "summary"=>"asdf", "amount"=>"2500"}, "commit"=>"Add New"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/journal_controller.rb:17
+  [1m[36mJournal Create (1.0ms)[0m  [1m[32mINSERT INTO "journals" ("reference", "date", "summary", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["reference", "4"], ["date", "12-03-2019"], ["summary", "asdf"], ["amount", 2500], ["created_at", "2019-12-08 07:28:14.554356"], ["updated_at", "2019-12-08 07:28:14.554356"]]
+  ↳ app/controllers/journal_controller.rb:17
+  [1m[35m (37.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/journal_controller.rb:17
+Redirected to 
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 38.7ms)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/journal_controller.rb:18:in `create'
+Started POST "/journal" for ::1 at 2019-12-08 12:28:37 +0500
+Processing by JournalController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r4zq6OVuKqj0hKFE7u6spfkWw3kuvE+YNWNOmmFvOtW+h8qD7HoWOA2SrFutzFyUUQ3LE3N5H+3hhFtFICycHQ==", "journal"=>{"reference"=>"4", "date"=>"12-03-2019", "summary"=>"asdf", "amount"=>"2500"}, "commit"=>"Add New"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/journal_controller.rb:17
+  [1m[36mJournal Create (0.6ms)[0m  [1m[32mINSERT INTO "journals" ("reference", "date", "summary", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["reference", "4"], ["date", "12-03-2019"], ["summary", "asdf"], ["amount", 2500], ["created_at", "2019-12-08 07:28:37.089512"], ["updated_at", "2019-12-08 07:28:37.089512"]]
+  ↳ app/controllers/journal_controller.rb:17
+  [1m[35m (21.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/journal_controller.rb:17
+Redirected to http://localhost:3000/journal
+Completed 302 Found in 34ms (ActiveRecord: 21.9ms)
+
+
+Started GET "/journal" for ::1 at 2019-12-08 12:28:37 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (1.1ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:15
+  Rendered journal/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 81ms (Views: 74.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/journal/new" for ::1 at 2019-12-08 12:28:41 +0500
+Processing by JournalController#new as HTML
+  Rendering journal/new.html.erb within layouts/application
+  Rendered journal/_insertForm.html.erb (14.0ms)
+  Rendered journal/new.html.erb within layouts/application (17.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 91ms (Views: 87.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/journal" for ::1 at 2019-12-08 12:28:46 +0500
+Processing by JournalController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bDe/v16dsj7LjgbNMPu4A/niGVCl53gbHxquwVCdibp9PJ/UV4mOrjKYC9Jz2UgyUfkROvgiKG7L/bseEd4vcg==", "journal"=>{"reference"=>"5", "date"=>"12-03-2019", "summary"=>"asdf", "amount"=>"2500"}, "commit"=>"Add New"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/journal_controller.rb:17
+  [1m[36mJournal Create (0.5ms)[0m  [1m[32mINSERT INTO "journals" ("reference", "date", "summary", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["reference", "5"], ["date", "12-03-2019"], ["summary", "asdf"], ["amount", 2500], ["created_at", "2019-12-08 07:28:46.253846"], ["updated_at", "2019-12-08 07:28:46.253846"]]
+  ↳ app/controllers/journal_controller.rb:17
+  [1m[35m (33.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/journal_controller.rb:17
+Redirected to http://localhost:3000/journal
+Completed 302 Found in 38ms (ActiveRecord: 34.2ms)
+
+
+Started GET "/journal" for ::1 at 2019-12-08 12:28:46 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.2ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:15
+  Rendered journal/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.2ms)
+
+

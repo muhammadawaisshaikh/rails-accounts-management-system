@@ -1,2 +1,14 @@
-<h1>Journal#show</h1>
-<p>Find me in app/views/journal/show.html.erb</p>
+<h1 class="py-4">Journal Details</h1>
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"><%= journal.reference %> | <%= journal.amount %></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%= journal.date %></h6>
+    <p class="card-text"><%= journal.summary %></p>
+    <h6 class="card-subtitle mb-2 text-muted"><%= journal.created_at %></h6>
+    
+    <%= link_to "Edit Journal Details", edit_journal_path(@journal), class: "btn btn-info" %>
+    <%= link_to "Delete Journal Details", journal_path(@journal), class: "btn btn-danger" , method: :delete, data: {confirm: "Are you sure?"} %>
+
+  </div>
+</div>

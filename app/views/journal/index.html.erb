@@ -1,9 +1,5 @@
 <h1 class="py-4">All Journals</h1>
 
-<% @journals.each do |journal| %>
-    <p><%= journal.reference %></p>
-<% end %>
-
 <table class="table table-striped">
   <thead>
     <tr>
@@ -16,29 +12,15 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@twitter</td>
-    </tr>
+    <% @journals.each do |journal| %>
+        <tr>
+            <th scope="row"><%= journal.id %></th>
+            <td><%= journal.reference %></td>
+            <td><%= journal.date %></td>
+            <td><%= journal.summary %></td>
+            <td><%= journal.amount %></td>
+            <td><%= journal.created_at %></td>
+        </tr>
+    <% end %>
   </tbody>
 </table>

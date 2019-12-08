@@ -1,0 +1,27 @@
+<%= form_for :journal, url: journal_path, html: {method: :put} do |form| %>
+    <div class="row pb-4">
+        <div class="col">
+            <%= form.label :reference %>
+            <%= form.text_field :reference, class: 'form-control', placeholder: 'Reference' %>
+        </div>
+        <div class="col">
+            <%= form.label :date %>
+            <%= form.text_field :date, class: 'form-control', placeholder: 'Date' %>
+        </div>
+    </div>
+    <div class="row pb-4">
+        <div class="col">
+            <%= form.label :summary %>
+            <%= form.text_field :summary, class: 'form-control', placeholder: 'Summary' %>
+        </div>
+    </div>
+    <div class="row pb-4">
+        <div class="col">
+            <%= form.label :amount %>
+            <%= form.text_field :amount, class: 'form-control', placeholder: 'Amount' %>
+        </div>
+    </div>
+
+    <%= form.submit class: 'btn btn-success', value: 'Update Journal' %>
+    <%= link_to "Cancel", journal_index_path, :class=>'btn btn-warning' %>
+<% end %>

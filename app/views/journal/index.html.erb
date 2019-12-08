@@ -9,6 +9,7 @@
       <th scope="col">Summary</th>
       <th scope="col">Amount</th>
       <th scope="col">Created at</th>
+      <th scope="col">Options</th>
     </tr>
   </thead>
   <tbody>
@@ -20,6 +21,15 @@
             <td><%= journal.summary %></td>
             <td><%= journal.amount %></td>
             <td><%= journal.created_at %></td>
+            <td>
+                <%= link_to edit_journal_path(journal), class: 'btn btn-info' do %>
+                    <span>Edit</span>
+                <% end %>
+                    
+                <%= link_to journal_path(journal), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger' do %>
+                    <span>Delete</span>
+                <% end %>
+            </td>
         </tr>
     <% end %>
   </tbody>

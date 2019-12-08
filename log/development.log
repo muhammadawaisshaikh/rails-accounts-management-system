@@ -2321,3 +2321,746 @@ Processing by JournalController#index as HTML
 Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/journal" for ::1 at 2019-12-08 12:35:35 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (1.2ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:15
+  Rendered journal/index.html.erb within layouts/application (254.8ms)
+Completed 500 Internal Server Error in 262ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin' for #<#<Class:0x00007f3e34951720>:0x00007f3e2c02b388>):
+    21:             <td><%= journal.amount %></td>
+    22:             <td><%= journal.created_at %></td>
+    23:             <td>
+    24:                 <%= link_to edit_journal_path(admin), class: 'btn btn-info' do %>
+    25:                     <span>Edit</span>>
+    26:                 <% end %>
+    27:                     
+  
+app/views/journal/index.html.erb:24:in `block in _app_views_journal_index_html_erb__1031168192126493590_69952501538640'
+app/views/journal/index.html.erb:15:in `_app_views_journal_index_html_erb__1031168192126493590_69952501538640'
+Started GET "/journal" for ::1 at 2019-12-08 12:35:46 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.9ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:15
+  Rendered journal/index.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 82ms (Views: 77.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/journal" for ::1 at 2019-12-08 12:35:55 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.9ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:15
+  Rendered journal/index.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 64ms (Views: 59.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/journal" for ::1 at 2019-12-08 12:36:03 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.8ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:15
+  Rendered journal/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 80ms (Views: 75.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/journal" for ::1 at 2019-12-08 12:36:25 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.8ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:16
+  Rendered journal/index.html.erb within layouts/application (13.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 85ms (Views: 80.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/journal/1/edit" for ::1 at 2019-12-08 12:36:38 +0500
+Processing by JournalController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJournal Load (2.2ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:25
+  Rendering journal/edit.html.erb within layouts/application
+  Rendered journal/edit.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 62ms (Views: 49.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/journal" for ::1 at 2019-12-08 12:38:40 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.5ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:16
+  Rendered journal/index.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 44ms (Views: 35.6ms | ActiveRecord: 5.4ms)
+
+
+Started DELETE "/journal/1" for ::1 at 2019-12-08 12:38:43 +0500
+Processing by JournalController#destroy as HTML
+  Parameters: {"authenticity_token"=>"etdp/cPtimvuyUeuzV949OtwT4shwPrYKwz4LqUsyzkZVC/tTCUv4UYbh6T3YFUTsU7phPRhKMR2jaPa+CofYw==", "id"=>"1"}
+  [1m[36mJournal Load (3.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:38
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/journal_controller.rb:39
+  [1m[36mJournal Destroy (1.0ms)[0m  [1m[31mDELETE FROM "journals" WHERE "journals"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/journal_controller.rb:39
+  [1m[35m (30.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/journal_controller.rb:39
+Redirected to http://localhost:3000/journal
+Completed 302 Found in 47ms (ActiveRecord: 35.1ms)
+
+
+Started GET "/journal" for ::1 at 2019-12-08 12:38:44 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.3ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:16
+  Rendered journal/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/journal/5" for ::1 at 2019-12-08 12:38:46 +0500
+Processing by JournalController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ovFg+kOtDEImGFcOrOuubk4x7pFoJEuOaoIhf7QnAdLBcibqzGWpyI7KlwSW1IOJFA9Inr2FmZI3A3qL6SHViA==", "id"=>"5"}
+  [1m[36mJournal Load (1.3ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:38
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/journal_controller.rb:39
+  [1m[36mJournal Destroy (1.1ms)[0m  [1m[31mDELETE FROM "journals" WHERE "journals"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/journal_controller.rb:39
+  [1m[35m (18.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/journal_controller.rb:39
+Redirected to http://localhost:3000/journal
+Completed 302 Found in 35ms (ActiveRecord: 23.3ms)
+
+
+Started GET "/journal" for ::1 at 2019-12-08 12:38:46 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.3ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:16
+  Rendered journal/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/journal/2/edit" for ::1 at 2019-12-08 12:42:55 +0500
+Processing by JournalController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJournal Load (2.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:25
+  Rendering journal/edit.html.erb within layouts/application
+  Rendered journal/_updateForm.html.erb (8.1ms)
+  Rendered journal/edit.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 63ms (Views: 54.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/journal/2/edit" for ::1 at 2019-12-08 12:43:53 +0500
+Processing by JournalController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJournal Load (3.3ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:25
+  Rendering journal/edit.html.erb within layouts/application
+  Rendered journal/_updateForm.html.erb (11.5ms)
+  Rendered journal/edit.html.erb within layouts/application (15.7ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 76ms (Views: 64.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/journal" for ::1 at 2019-12-08 12:43:55 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (1.3ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:16
+  Rendered journal/index.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 73ms (Views: 66.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/journal/2/edit" for ::1 at 2019-12-08 12:43:58 +0500
+Processing by JournalController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJournal Load (3.7ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:25
+  Rendering journal/edit.html.erb within layouts/application
+  Rendered journal/_updateForm.html.erb (14.1ms)
+  Rendered journal/edit.html.erb within layouts/application (18.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 78ms (Views: 68.2ms | ActiveRecord: 3.7ms)
+
+
+Started PUT "/journal" for ::1 at 2019-12-08 12:44:02 +0500
+  
+ActionController::RoutingError (No route matches [PUT] "/journal"):
+  
+actionpack (5.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PUT "/journal" for ::1 at 2019-12-08 12:44:19 +0500
+  
+ActionController::RoutingError (No route matches [PUT] "/journal"):
+  
+actionpack (5.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PUT "/journal" for ::1 at 2019-12-08 12:44:25 +0500
+  
+ActionController::RoutingError (No route matches [PUT] "/journal"):
+  
+actionpack (5.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PUT "/journal" for ::1 at 2019-12-08 13:07:01 +0500
+  
+ActionController::RoutingError (No route matches [PUT] "/journal"):
+  
+actionpack (5.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PUT "/journal" for ::1 at 2019-12-08 13:07:06 +0500
+  
+ActionController::RoutingError (No route matches [PUT] "/journal"):
+  
+actionpack (5.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PUT "/journal" for ::1 at 2019-12-08 13:07:15 +0500
+  
+ActionController::RoutingError (No route matches [PUT] "/journal"):
+  
+actionpack (5.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PUT "/journal" for ::1 at 2019-12-08 13:07:24 +0500
+  
+ActionController::RoutingError (No route matches [PUT] "/journal"):
+  
+actionpack (5.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/journal/2/edit" for ::1 at 2019-12-08 13:07:28 +0500
+Processing by JournalController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJournal Load (1.3ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:25
+  Rendering journal/edit.html.erb within layouts/application
+  Rendered journal/_updateForm.html.erb (11.1ms)
+  Rendered journal/edit.html.erb within layouts/application (15.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 88ms (Views: 76.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/journal" for ::1 at 2019-12-08 13:07:29 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (1.0ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:16
+  Rendered journal/index.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 88ms (Views: 82.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/journal/3/edit" for ::1 at 2019-12-08 13:07:31 +0500
+Processing by JournalController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJournal Load (1.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:25
+  Rendering journal/edit.html.erb within layouts/application
+  Rendered journal/_updateForm.html.erb (11.5ms)
+  Rendered journal/edit.html.erb within layouts/application (16.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 82ms (Views: 75.5ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/journal/3/edit" for ::1 at 2019-12-08 13:07:36 +0500
+  
+ActionController::RoutingError (No route matches [PUT] "/journal/3/edit"):
+  
+actionpack (5.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PUT "/journal/3/edit" for ::1 at 2019-12-08 13:09:13 +0500
+  
+ActionController::RoutingError (No route matches [PUT] "/journal/3/edit"):
+  
+actionpack (5.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/journal/" for ::1 at 2019-12-08 13:09:20 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.3ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:16
+  Rendered journal/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/journal/2/edit" for ::1 at 2019-12-08 13:09:23 +0500
+Processing by JournalController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJournal Load (0.8ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:25
+  Rendering journal/edit.html.erb within layouts/application
+  Rendered journal/_updateForm.html.erb (7.3ms)
+  Rendered journal/edit.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 63ms (Views: 57.9ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/journal/2" for ::1 at 2019-12-08 13:09:25 +0500
+Processing by JournalController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dw73SCOD+Jqk1d+cncFAcqG+yPU1o7q/akwr/Yy7x4rxLnUZXGNJhpdndISVI6VqcZrU7fME6lvrWK6u3gtYXg==", "journal"=>{"reference"=>"3", "date"=>"12-03-2019", "summary"=>"asdf", "amount"=>"2500"}, "commit"=>"Update Journal", "id"=>"2"}
+  [1m[36mJournal Load (2.1ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:29
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/journal_controller.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/journal_controller.rb:30
+Redirected to http://localhost:3000/journal
+Completed 302 Found in 17ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/journal" for ::1 at 2019-12-08 13:09:25 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.5ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:16
+  Rendered journal/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/journal/3/edit" for ::1 at 2019-12-08 13:09:29 +0500
+Processing by JournalController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJournal Load (1.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:25
+  Rendering journal/edit.html.erb within layouts/application
+  Rendered journal/_updateForm.html.erb (8.0ms)
+  Rendered journal/edit.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 57ms (Views: 51.9ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/journal/3" for ::1 at 2019-12-08 13:09:32 +0500
+Processing by JournalController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+cU3FLWa4ev+8DyLWvF1bAqUWQW0GC3NtiJQjjfF7kZA2wJ3D5SAhWOTYl9jWIvQSx0rpIqXpqRo7R+82/eTWg==", "journal"=>{"reference"=>"4", "date"=>"12-03-2019", "summary"=>"asdfc", "amount"=>"2500"}, "commit"=>"Update Journal", "id"=>"3"}
+  [1m[36mJournal Load (4.2ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/journal_controller.rb:30
+  [1m[36mJournal Update (0.9ms)[0m  [1m[33mUPDATE "journals" SET "summary" = $1, "updated_at" = $2 WHERE "journals"."id" = $3[0m  [["summary", "asdfc"], ["updated_at", "2019-12-08 08:09:32.521517"], ["id", 3]]
+  ↳ app/controllers/journal_controller.rb:30
+  [1m[35m (25.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/journal_controller.rb:30
+Redirected to http://localhost:3000/journal
+Completed 302 Found in 46ms (ActiveRecord: 31.1ms)
+
+
+Started GET "/journal" for ::1 at 2019-12-08 13:09:32 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.7ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:16
+  Rendered journal/index.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 51ms (Views: 45.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/journal/4/edit" for ::1 at 2019-12-08 13:09:49 +0500
+Processing by JournalController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mJournal Load (0.9ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:25
+  Rendering journal/edit.html.erb within layouts/application
+  Rendered journal/_updateForm.html.erb (8.8ms)
+  Rendered journal/edit.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 64ms (Views: 54.1ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/journal/4" for ::1 at 2019-12-08 13:09:52 +0500
+Processing by JournalController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pMCvMucwMrML7xgoNtZXzXSYvotecQnJx2cPQAnebcZq+RPE+BT6cfPEqdMoQll/DRSczYyJN3maaOAYGudTFw==", "journal"=>{"reference"=>"44", "date"=>"12-03-2019", "summary"=>"asdf", "amount"=>"2500"}, "commit"=>"Update Journal", "id"=>"4"}
+  [1m[36mJournal Load (2.3ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:29
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/journal_controller.rb:30
+  [1m[36mJournal Update (2.1ms)[0m  [1m[33mUPDATE "journals" SET "reference" = $1, "updated_at" = $2 WHERE "journals"."id" = $3[0m  [["reference", "44"], ["updated_at", "2019-12-08 08:09:52.742364"], ["id", 4]]
+  ↳ app/controllers/journal_controller.rb:30
+  [1m[35m (18.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/journal_controller.rb:30
+Redirected to http://localhost:3000/journal
+Completed 302 Found in 38ms (ActiveRecord: 25.4ms)
+
+
+Started GET "/journal" for ::1 at 2019-12-08 13:09:52 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.6ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:16
+  Rendered journal/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/journal/3/edit" for ::1 at 2019-12-08 13:09:55 +0500
+Processing by JournalController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJournal Load (0.6ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:25
+  Rendering journal/edit.html.erb within layouts/application
+  Rendered journal/_updateForm.html.erb (7.1ms)
+  Rendered journal/edit.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 57ms (Views: 50.6ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/journal/3" for ::1 at 2019-12-08 13:10:00 +0500
+Processing by JournalController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YTpZyDCnCEW0dtltj4mbZ6OTuUd0WZfCgAKUDtQvG8TYJGyriqlpKykVh7m2IGXb4hrL5krWHKtezds8OB1m2A==", "journal"=>{"reference"=>"33", "date"=>"12-03-2019", "summary"=>"asdfc", "amount"=>"2500"}, "commit"=>"Update Journal", "id"=>"3"}
+  [1m[36mJournal Load (0.6ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:29
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/journal_controller.rb:30
+  [1m[36mJournal Update (0.9ms)[0m  [1m[33mUPDATE "journals" SET "reference" = $1, "updated_at" = $2 WHERE "journals"."id" = $3[0m  [["reference", "33"], ["updated_at", "2019-12-08 08:10:00.697190"], ["id", 3]]
+  ↳ app/controllers/journal_controller.rb:30
+  [1m[35m (31.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/journal_controller.rb:30
+Redirected to http://localhost:3000/journal
+Completed 302 Found in 47ms (ActiveRecord: 33.3ms)
+
+
+Started GET "/journal" for ::1 at 2019-12-08 13:10:00 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (1.3ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:16
+  Rendered journal/index.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 69ms (Views: 63.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/journal/2/edit" for ::1 at 2019-12-08 13:10:03 +0500
+Processing by JournalController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJournal Load (0.7ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:25
+  Rendering journal/edit.html.erb within layouts/application
+  Rendered journal/_updateForm.html.erb (14.1ms)
+  Rendered journal/edit.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 82ms (Views: 74.6ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/journal/2" for ::1 at 2019-12-08 13:10:06 +0500
+Processing by JournalController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wXPLO3r1N25cA6F1w26P7wknAuEMZ4VOcwgQkucWLV5HU0lqBRWGcm+xCm3LjGr32QMe+crA1aryHJXBtaayig==", "journal"=>{"reference"=>"322", "date"=>"12-03-2019", "summary"=>"asdf", "amount"=>"2500"}, "commit"=>"Update Journal", "id"=>"2"}
+  [1m[36mJournal Load (0.4ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:29
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/journal_controller.rb:30
+  [1m[36mJournal Update (0.6ms)[0m  [1m[33mUPDATE "journals" SET "reference" = $1, "updated_at" = $2 WHERE "journals"."id" = $3[0m  [["reference", "322"], ["updated_at", "2019-12-08 08:10:06.544002"], ["id", 2]]
+  ↳ app/controllers/journal_controller.rb:30
+  [1m[35m (88.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/journal_controller.rb:30
+Redirected to http://localhost:3000/journal
+Completed 302 Found in 98ms (ActiveRecord: 89.7ms)
+
+
+Started GET "/journal" for ::1 at 2019-12-08 13:10:06 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.9ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:16
+  Rendered journal/index.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 84ms (Views: 76.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/journal/2/edit" for ::1 at 2019-12-08 13:10:11 +0500
+Processing by JournalController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJournal Load (2.1ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:25
+  Rendering journal/edit.html.erb within layouts/application
+  Rendered journal/_updateForm.html.erb (13.4ms)
+  Rendered journal/edit.html.erb within layouts/application (17.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 73ms (Views: 63.4ms | ActiveRecord: 2.1ms)
+
+
+Started PUT "/journal/2" for ::1 at 2019-12-08 13:10:14 +0500
+Processing by JournalController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hYeY6Gw0iV+h2gCpBTEwGuF61M6eBocOnQn57cw0k4oDpxq5E9Q4Q5Joq7EN09UCMV7I1lih1+ocHXy+noQMXg==", "journal"=>{"reference"=>"22", "date"=>"12-03-2019", "summary"=>"asdf", "amount"=>"2500"}, "commit"=>"Update Journal", "id"=>"2"}
+  [1m[36mJournal Load (0.7ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/journal_controller.rb:30
+  [1m[36mJournal Update (1.0ms)[0m  [1m[33mUPDATE "journals" SET "reference" = $1, "updated_at" = $2 WHERE "journals"."id" = $3[0m  [["reference", "22"], ["updated_at", "2019-12-08 08:10:14.013991"], ["id", 2]]
+  ↳ app/controllers/journal_controller.rb:30
+  [1m[35m (26.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/journal_controller.rb:30
+Redirected to http://localhost:3000/journal
+Completed 302 Found in 40ms (ActiveRecord: 28.6ms)
+
+
+Started GET "/journal" for ::1 at 2019-12-08 13:10:14 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.3ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:16
+  Rendered journal/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/journal/4/edit" for ::1 at 2019-12-08 13:11:06 +0500
+Processing by JournalController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mJournal Load (3.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/journal_controller.rb:25
+  Rendering journal/edit.html.erb within layouts/application
+  Rendered journal/_updateForm.html.erb (13.9ms)
+  Rendered journal/edit.html.erb within layouts/application (19.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 93ms (Views: 80.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/journal" for ::1 at 2019-12-08 13:11:07 +0500
+Processing by JournalController#index as HTML
+  Rendering journal/index.html.erb within layouts/application
+  [1m[36mJournal Load (1.0ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journal/index.html.erb:16
+  Rendered journal/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 89ms (Views: 82.5ms | ActiveRecord: 1.0ms)
+
+

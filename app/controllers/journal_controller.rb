@@ -26,9 +26,18 @@ class JournalController < ApplicationController
   end
 
   def update
+    @journal = Journal.find(params[:id])
+      if @journal.update(params_journal)
+        redirect_to journal_index_path
+      else
+        render 'edit'
+    end
   end
 
   def destroy
+    @journal = Journal.find(params[:id])
+    @journal.destroy
+    redirect_to journal_index_path
   end
 
   private

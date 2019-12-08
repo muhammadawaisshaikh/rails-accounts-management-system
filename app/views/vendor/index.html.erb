@@ -1,0 +1,32 @@
+<h1 class="py-4">All Vendors</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Created at</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @vendors.each do |vendor| %>
+        <tr>
+            <th scope="row"><%= vendor.id %></th>
+            <td><%= vendor.name %></td>
+            <td><%= vendor.mobile %></td>
+            <td><%= vendor.created_at %></td>
+            <td>
+                <%= link_to edit_vendor_path(vendor), class: 'btn btn-info' do %>
+                    <span>Edit</span>
+                <% end %>
+                    
+                <%= link_to vendor_path(vendor), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger' do %>
+                    <span>Delete</span>
+                <% end %>
+            </td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>

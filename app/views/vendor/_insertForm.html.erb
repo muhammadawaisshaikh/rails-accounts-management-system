@@ -1,0 +1,15 @@
+<%= form_for :vendor, url: vendor_index_path, html: {method: :post} do |form| %>
+
+    <div class="row pb-4">
+        <div class="col">
+            <%= form.label :name %>
+            <%= form.text_field :name, class: 'form-control', placeholder: 'Name' %>
+        </div>
+        <div class="col">
+            <%= form.label :mobile %>
+            <%= form.text_field :mobile, class: 'form-control', placeholder: 'Mobile' %>
+        </div>
+    </div>
+
+    <%= form.submit class: 'btn btn-success', value: 'Add New' %>
+<% end %>

@@ -35,6 +35,19 @@
           <% end %>
         </div>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="vendorDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Vendor
+        </a>
+        <div class="dropdown-menu" aria-labelledby="vendorDropdown">
+          <%= link_to vendor_index_path, :class => "dropdown-item" do %>
+            <span>All Vendors</span>
+          <% end %>
+          <%= link_to new_vendor_path, :class => "dropdown-item" do %>
+            <span>Add Vendor</span>
+          <% end %>
+        </div>
+      </li>
     </ul>
   </div>
 </nav>

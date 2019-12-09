@@ -1,12 +1,8 @@
 class OrderController < ApplicationController
 
-  def get_vendors
-    @vendors = Vendor.all.order(id: :asc)
-  end
-
   def index
     @orders = Order.all.order(id: :asc)
-    @vendors = Vendor.select("*").joins(:products)
+    @vendors = Vendor.select("*").joins(:products, :orders)
   end
 
   def show
@@ -14,8 +10,6 @@ class OrderController < ApplicationController
   end
 
   def new
-    get_vendors
-
     @order = Order.new
   end
 

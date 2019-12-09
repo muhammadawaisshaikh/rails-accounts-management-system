@@ -18,7 +18,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @orders.each do |order| %>
+    <% @vendors.each do |order| %>
         <tr>
             <th scope="row"><%= order.id %></th>
             <td><%= order.name %></td>
@@ -29,7 +29,7 @@
             <td><%= order.status %></td>
             <td><%= order.paymentStatus %></td>
             <td><%= order.name %></td>
-            <td><%= order.name %></td>
+            <td><%= order.vendor_name %></td>
             <td><%= order.created_at %></td>
             <td>
                 <%= link_to edit_order_path(order), class: 'btn btn-info' do %>

@@ -2,7 +2,6 @@ class OrderController < ApplicationController
 
   def index
     @orders = Order.all.order(id: :asc)
-    @vendors = Vendor.select("*").joins(:products, :orders)
   end
 
   def show

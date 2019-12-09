@@ -11,14 +11,12 @@
       <th scope="col">Date</th>
       <th scope="col">Status</th>
       <th scope="col">Payment Status</th>
-      <th scope="col">Product</th>
-      <th scope="col">Vendor</th>
       <th scope="col">Created at</th>
       <th scope="col">Options</th>
     </tr>
   </thead>
   <tbody>
-    <% @vendors.each do |order| %>
+    <% @orders.each do |order| %>
         <tr>
             <th scope="row"><%= order.id %></th>
             <td><%= order.name %></td>
@@ -28,8 +26,6 @@
             <td><%= order.date %></td>
             <td><%= order.status %></td>
             <td><%= order.paymentStatus %></td>
-            <td><%= order.product_name %></td>
-            <td><%= order.vendor_name %></td>
             <td><%= order.created_at %></td>
             <td>
                 <%= link_to edit_order_path(order), class: 'btn btn-info' do %>

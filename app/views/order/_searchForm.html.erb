@@ -1,0 +1,4 @@
+<%= simple_form_for :search, url: order_index_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+  <%= f.input :mobile, input_html: {value: "", class: 'form-control'} %>   
+  <%= f.submit "Search", class: "btn btn-primary mt-4 ml-3" %>
+<% end %>

@@ -1,5 +1,9 @@
 class ProductController < ApplicationController
 
+  def get_vendors
+    @vendors = Vendor.all.order(id: :asc)
+  end
+
   def index
     @products = Product.all.order(id: :asc)
   end
@@ -9,6 +13,8 @@ class ProductController < ApplicationController
   end
 
   def new
+    get_vendors
+
     @product = Product.new
   end
 

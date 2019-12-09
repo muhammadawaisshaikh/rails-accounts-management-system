@@ -1,2 +1,18 @@
 <h1 class="py-4">New Product</h1>
-<%= render 'insertForm' %>
+
+<div class="row">
+    <div class="col-md-9 col-12">
+        <%= render 'insertForm' %>
+    </div>
+    <div class="border-left col-md-3 col-12">
+        <h3 class="pt-4">Suppliers Listing</h3>
+        <% @vendors.each do |vendor| %>
+            <div class="card my-4">
+                <div class="card-body">
+                    <h5 class="card-title"><%= vendor.name %></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">ID: <%= vendor.id %></h6>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>

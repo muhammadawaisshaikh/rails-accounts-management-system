@@ -1,0 +1,50 @@
+<%= form_for :order, url: order_path, html: {method: :put} do |form| %>
+    
+    <div class="row pb-4">
+        <div class="col">
+            <%= form.label :name %>
+            <%= form.text_field :name, class: 'form-control', placeholder: 'Name' %>
+        </div>
+        <div class="col">
+            <%= form.label :mobile %>
+            <%= form.text_field :mobile, class: 'form-control', placeholder: 'Mobile #' %>
+        </div>
+    </div>
+    <div class="row pb-4">
+        <div class="col">
+            <%= form.label :amount %>
+            <%= form.text_field :amount, class: 'form-control', placeholder: 'Amount #' %>
+        </div>
+        <div class="col">
+            <%= form.label :description %>
+            <%= form.text_field :description, class: 'form-control', placeholder: 'Description' %>
+        </div>
+    </div>
+    <div class="row pb-4">
+        <div class="col">
+            <%= form.label :date %>
+            <%= form.text_field :date, class: 'form-control', placeholder: 'Date' %>
+        </div>
+        <div class="col">
+            <%= form.label :status %>
+            <%= form.text_field :status, class: 'form-control', placeholder: 'Status' %>
+        </div>
+    </div>
+    <div class="row pb-4">
+        <div class="col">
+            <%= form.label :paymentStatus %>
+            <%= form.text_field :paymentStatus, class: 'form-control', placeholder: 'Payment Status' %>
+        </div>
+        <div class="col">
+            <%= form.label :product_id %>
+            <%= form.text_field :product_id, class: 'form-control', placeholder: 'Product Id #' %>
+        </div>
+        <div class="col">
+            <%= form.label :vendor_id %>
+            <%= form.text_field :vendor_id, class: 'form-control', placeholder: 'Vendor Id #' %>
+        </div>
+    </div>
+
+    <%= form.submit class: 'btn btn-success', value: 'Update Order' %>
+    <%= link_to "Cancel", order_index_path, :class=>'btn btn-warning' %>
+<% end %>

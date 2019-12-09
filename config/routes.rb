@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   # root route
   root 'journal#index'
 
@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :journal
   resources :product
   resources :vendor
+  resources :order
+  
 end

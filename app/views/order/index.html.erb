@@ -1,0 +1,46 @@
+<h1 class="py-4">All Orders</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Description</th>
+      <th scope="col">Date</th>
+      <th scope="col">Status</th>
+      <th scope="col">Payment Status</th>
+      <th scope="col">Product</th>
+      <th scope="col">Vendor</th>
+      <th scope="col">Created at</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+        <tr>
+            <th scope="row"><%= order.id %></th>
+            <td><%= order.name %></td>
+            <td><%= order.mobile %></td>
+            <td><%= order.amount %></td>
+            <td><%= order.description %></td>
+            <td><%= order.date %></td>
+            <td><%= order.status %></td>
+            <td><%= order.paymentStatus %></td>
+            <td><%= order.name %></td>
+            <td><%= order.name %></td>
+            <td><%= order.created_at %></td>
+            <td>
+                <%= link_to edit_order_path(order), class: 'btn btn-info' do %>
+                    <span>Edit</span>
+                <% end %>
+                    
+                <%= link_to order_path(order), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger' do %>
+                    <span>Delete</span>
+                <% end %>
+            </td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>

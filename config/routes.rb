@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :product
   resources :vendor
   resources :order
+  resources :dashboard
   
 end

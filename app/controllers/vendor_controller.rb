@@ -44,7 +44,7 @@ class VendorController < ApplicationController
   private
 
   def params_vendor
-    params.require(:vendor).permit(:name, :mobile)
+    params.require(:vendor).permit(:vendor_name, :mobile)
   end
 
 end

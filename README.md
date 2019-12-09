@@ -22,5 +22,8 @@ rails generate migration RemoveAdminIdFromAnimals admin_id:bigint
 # add column in table using migration
 rails generate migration add_email_to_users email:string
 
+# update column name - rails g migration UpdateColumnVendors
+rename_column :vendors, :name, :vendor_name
+
 # Joins
 @vendors = Vendor.select("*").joins(:products)

@@ -13,13 +13,13 @@
     </tr>
   </thead>
   <tbody>
-    <% @products.each do |product| %>
+    <% @vendors.each do |product| %>
         <tr>
             <th scope="row"><%= product.id %></th>
             <td><%= product.name %></td>
             <td><%= product.stock %></td>
             <td><%= product.retailPrice %></td>
-            <td><%= product.vendor_id %></td>
+            <td><%= product.vendor_name %></td>
             <td><%= product.created_at %></td>
             <td>
                 <%= link_to edit_product_path(product), class: 'btn btn-info' do %>

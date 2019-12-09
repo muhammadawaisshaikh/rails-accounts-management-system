@@ -5,10 +5,10 @@ class DashboardController < ApplicationController
     @suppliers = Vendor.all.count
 
     @all = Order.all.count;
-    @pending = Order.where(:status => 'pending').count;
-    @shipped = Order.where(:status => 'shipped').count;
-    @completed = Order.where(:status => 'completed').count;
-    @returned = Order.where(:status => 'returned').count;
-    @canceled = Order.where(:status => 'canceled').count;
+    @pending = Order.where(:status => 'Pending').count;
+    @shipped = Order.where(:status => 'Shipped').count;
+    @completed = Order.where(:status => 'Completed').count;
+    @returned = Order.where(:status => 'Returned').count;
+    @canceled = Order.where(:status => 'Canceled').count;
   end
 end

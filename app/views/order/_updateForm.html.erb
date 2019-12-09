@@ -27,13 +27,13 @@
         </div>
         <div class="col">
             <%= form.label :status %>
-            <%= form.text_field :status, class: 'form-control', placeholder: 'Status' %>
+            <%= form.select(:status, ['Pending', 'Shipped', 'Completed', 'Returned', 'Canceled'], {}, { :class => 'form-control' }) %>
         </div>
     </div>
     <div class="row pb-4">
         <div class="col">
             <%= form.label :paymentStatus %>
-            <%= form.text_field :paymentStatus, class: 'form-control', placeholder: 'Payment Status' %>
+            <%= form.select(:paymentStatus, ['Paid', 'Not Paid'], {}, { :class => 'form-control' }) %>
         </div>
         <div class="col">
             <%= form.label :product_id %>

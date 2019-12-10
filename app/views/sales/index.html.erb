@@ -1,0 +1,84 @@
+<h1 class="py-4"><b>Sales W.R.T Suppliers</b></h1>
+
+<div class="row justify-content-center border-bottom pb-4">
+    <div class="col-12 col-md-2">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-header">Total Sales</div>
+            <div class="card-body">
+                <h1 class="card-title"><%= @sumTotal %></h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-2">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-header">Completed Orders Sales</div>
+            <div class="card-body">
+                <h1 class="card-title"><%= @completedTotal %></h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-2">
+        <div class="card text-white bg-secondary mb-3">
+            <div class="card-header">Pending Orders Sales</div>
+            <div class="card-body">
+                <h1 class="card-title"><%= @pendingTotal %></h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-2">
+        <div class="card text-white bg-danger mb-3">
+            <div class="card-header">Shipped Orders Sales</div>
+            <div class="card-body">
+                <h1 class="card-title"><%= @shippedTotal %></h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-2">
+        <div class="card text-white bg-warning mb-3">
+            <div class="card-header">Return Orders Sales</div>
+            <div class="card-body">
+                <h1 class="card-title"><%= @returnedTotal %></h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-2">
+        <div class="card text-white bg-info mb-3">
+            <div class="card-header">Canceled Orders Sales</div>
+            <div class="card-body">
+                <h1 class="card-title"><%= @canceledTotal %></h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Description</th>
+      <th scope="col">Vendor</th>
+      <th scope="col">Date</th>
+      <th scope="col">Status</th>
+      <th scope="col">Payment Status</th>
+      <th scope="col">Created at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @vendors.each do |order| %>
+        <tr>
+            <th scope="row"><%= order.id %></th>
+            <td><%= order.name %></td>
+            <td><%= order.mobile %></td>
+            <td><%= order.amount %></td>
+            <td><%= order.description %></td>
+            <td><%= order.vendor_name %></td>
+            <td><%= order.date %></td>
+            <td><%= order.status %></td>
+            <td><%= order.paymentStatus %></td>
+            <td><%= order.created_at %></td>
+    <% end %>
+  </tbody>
+</table>

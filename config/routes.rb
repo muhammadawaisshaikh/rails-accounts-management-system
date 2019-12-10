@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :vendor
   resources :order
   resources :dashboard
+  resources :sales
   
 end

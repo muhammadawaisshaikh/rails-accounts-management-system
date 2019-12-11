@@ -1,8 +1,11 @@
 # rails-accounts-management-system
 open source account management system rails
 
-# Rails 6 Search Forms
+# Rails 6 Search forms for your Ruby on Rails application
 https://github.com/activerecord-hackery/ransack
+
+# Squeel write your Active Record queries with fewer strings, and more Ruby
+https://github.com/activerecord-hackery/squeel
 
 # rails new app
 rails new accounting-management-system --database=postgresql

@@ -4,6 +4,9 @@ open source account management system rails
 # Rails 6 Search forms for your Ruby on Rails application
 https://github.com/activerecord-hackery/ransack
 
+# Rails Simple Search
+https://medium.com/le-wagon/build-a-simple-search-with-the-simple-form-gem-in-rails-5-b247168282d1
+
 # Squeel write your Active Record queries with fewer strings, and more Ruby
 https://github.com/activerecord-hackery/squeel
 

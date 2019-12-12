@@ -49,6 +49,12 @@ rename_column :table, :old_column, :new_column
 # Joins
 @vendors = Vendor.select("*").joins(:products)
 
+# update column type to datetime - rails g migration change_date_string_to_datetime
+def change
+    remove_column :payments, :date
+    add_column :payments, :date, :datetime
+end
+
 # simple_form Gem in Rails 5
 https://medium.com/le-wagon/build-a-simple-search-with-the-simple-form-gem-in-rails-5-b247168282d1
 https://github.com/plataformatec/simple_form

@@ -7,18 +7,24 @@ class PaymentController < ApplicationController
       @status = @search["status"]
       @payments = Payment.where("to_from ILIKE ? AND status ILIKE ?", "%#{@to_from}%", "%#{@status}%")
 
-      @all = Payment.where("to_from ILIKE ? AND status ILIKE ?", "%#{@to_from}%", "%#{@status}%").count;
-      @allCredit = Payment.select("*").where("to_from ILIKE ? AND status = 'Credit' ", "%#{@to_from}%").count;
-      @allDebit = Payment.select("*").where("to_from ILIKE ? AND status = 'Debit' ", "%#{@to_from}%").count;
+      @allCount = Payment.where("to_from ILIKE ? AND status ILIKE ?", "%#{@to_from}%", "%#{@status}%").count;
+      @allSum = Payment.where("to_from ILIKE ? AND status ILIKE ?", "%#{@to_from}%", "%#{@status}%").sum(:amount);
+      @allCreditCount = Payment.select("*").where("to_from ILIKE ? AND status = 'Credit' ", "%#{@to_from}%").count;
+      @allCreditSum = Payment.select("*").where("to_from ILIKE ? AND status = 'Credit' ", "%#{@to_from}%").sum(:amount);
+      @allDebitCount = Payment.select("*").where("to_from ILIKE ? AND status = 'Debit' ", "%#{@to_from}%").count;
+      @allDebitSum = Payment.select("*").where("to_from ILIKE ? AND status = 'Debit' ", "%#{@to_from}%").sum(:amount);
     end
   end
 
   def index
     @payments = Payment.all.order(id: :asc)
 
-    @all = Payment.all.count;
-    @allCredit = Payment.all.where(:status => 'Credit').count;
-    @allDebit = Payment.all.where(:status => 'Debit').count;
+    @allCount = Payment.all.count;
+    @allSum = Payment.all.sum(:amount);
+    @allCreditCount = Payment.all.where(:status => 'Credit').count;
+    @allCreditSum = Payment.all.where(:status => 'Credit').sum(:amount);
+    @allDebitCount = Payment.all.where(:status => 'Debit').count;
+    @allDebitSum = Payment.all.where(:status => 'Debit').sum(:amount);
 
     search    
   end

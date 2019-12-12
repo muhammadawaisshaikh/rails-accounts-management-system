@@ -19,6 +19,10 @@
             <%= form.label :status %>
             <%= form.select(:status, ['Debit', 'Credit'], {}, { :class => 'form-control' }) %>
         </div>
+        <div class="col">
+            <%= form.label :amount %>
+            <%= form.text_field :amount, class: 'form-control', placeholder: 'Amount' %>
+        </div>
     </div>
 
     <%= form.submit class: 'btn btn-success', value: 'Add New' %>

@@ -10,25 +10,25 @@
 <div class="row border-bottom pb-4">
   <div class="col-12 col-md-2">
       <div class="card text-white bg-primary mb-3">
-          <div class="card-header">Total Payments</div>
+          <div class="card-header">Total Payments <span class="float-right"><%= @allCount %></span></div>
           <div class="card-body">
-              <h1 class="card-title"><%= @all %></h1>
+              <h1 class="card-title"><%= @allSum %></h1>
           </div>
       </div>
   </div>
   <div class="col-12 col-md-2">
       <div class="card text-white bg-success mb-3">
-          <div class="card-header">Total Credits</div>
+          <div class="card-header">Total Credits <span class="float-right"><%= @allCreditCount %></span></div>
           <div class="card-body">
-              <h1 class="card-title"><%= @allCredit %></h1>
+              <h1 class="card-title"><%= @allCreditSum %></h1>
           </div>
       </div>
   </div>
   <div class="col-12 col-md-2">
       <div class="card text-white bg-danger mb-3">
-          <div class="card-header">Total Debits</div>
+          <div class="card-header">Total Debits <span class="float-right"><%= @allDebitCount %></span></div>
           <div class="card-body">
-              <h1 class="card-title"><%= @allDebit %></h1>
+              <h1 class="card-title"><%= @allDebitSum %></h1>
           </div>
       </div>
   </div>
@@ -42,6 +42,7 @@
       <th scope="col">Purpose</th>
       <th scope="col">To/From</th>
       <th scope="col">Status</th>
+      <th scope="col">Amount</th>
       <th scope="col">Created at</th>
       <th scope="col">Options</th>
     </tr>
@@ -54,6 +55,7 @@
             <td><%= payment.purpose %></td>
             <td><%= payment.to_from %></td>
             <td><%= payment.status %></td>
+            <td><%= payment.amount %></td>
             <td><%= payment.created_at %></td>
             <td>
                 <%= link_to edit_payment_path(payment), class: 'btn btn-info' do %>

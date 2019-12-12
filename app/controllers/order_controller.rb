@@ -6,11 +6,25 @@ class OrderController < ApplicationController
       @mobile = @search["mobile"]
       @name = @search["name"]
       @orders = Order.where("mobile ILIKE ? AND name ILIKE ?", "%#{@mobile}%", "%#{@name}%")
+
+      @all = Order.select("*").where("name ILIKE ? AND mobile ILIKE ?", "%#{@name}%", "%#{@mobile}%").count;
+      @pending = Order.where("name ILIKE ? AND mobile ILIKE ?", "%#{@name}%", "%#{@mobile}% AND status = 'Pending'").count;
+      @shipped = Order.where("name ILIKE ? AND mobile ILIKE ?", "%#{@name}%", "%#{@mobile}% AND status = 'Shipped'").count;
+      @completed = Order.where("name ILIKE ? AND mobile ILIKE ?", "%#{@name}%", "%#{@mobile}% AND status = 'Completed'").count;
+      @returned = Order.where("name ILIKE ? AND mobile ILIKE ?", "%#{@name}%", "%#{@mobile}% AND status = 'Returned'").count;
+      @canceled = Order.where("name ILIKE ? AND mobile ILIKE ?", "%#{@name}%", "%#{@mobile}% AND status = 'Canceled'").count;
     end
   end
 
   def index
     @orders = Order.all.order(id: :asc)
+
+    @all = Order.all.count;
+    @pending = Order.where(:status => 'Pending').count;
+    @shipped = Order.where(:status => 'Shipped').count;
+    @completed = Order.where(:status => 'Completed').count;
+    @returned = Order.where(:status => 'Returned').count;
+    @canceled = Order.where(:status => 'Canceled').count;
 
     search    
   end

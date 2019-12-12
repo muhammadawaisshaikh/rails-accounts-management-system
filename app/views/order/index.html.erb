@@ -7,6 +7,57 @@
   </div>
 </div>
 
+<div class="row justify-content-center border-bottom">
+  <div class="col-12 col-md-2">
+      <div class="card text-white bg-primary mb-3">
+          <div class="card-header">Total Orders</div>
+          <div class="card-body">
+              <h1 class="card-title"><%= @all %></h1>
+          </div>
+      </div>
+  </div>
+  <div class="col-12 col-md-2">
+      <div class="card text-white bg-success mb-3">
+          <div class="card-header">Completed Orders</div>
+          <div class="card-body">
+              <h1 class="card-title"><%= @completed %></h1>
+          </div>
+      </div>
+  </div>
+  <div class="col-12 col-md-2">
+      <div class="card text-white bg-secondary mb-3">
+          <div class="card-header">Pending Orders</div>
+          <div class="card-body">
+              <h1 class="card-title"><%= @pending %></h1>
+          </div>
+      </div>
+  </div>
+  <div class="col-12 col-md-2">
+      <div class="card text-white bg-danger mb-3">
+          <div class="card-header">Shipped Orders</div>
+          <div class="card-body">
+              <h1 class="card-title"><%= @shipped %></h1>
+          </div>
+      </div>
+  </div>
+  <div class="col-12 col-md-2">
+      <div class="card text-white bg-warning mb-3">
+          <div class="card-header">Return Orders</div>
+          <div class="card-body">
+              <h1 class="card-title"><%= @returned %></h1>
+          </div>
+      </div>
+  </div>
+  <div class="col-12 col-md-2">
+      <div class="card text-white bg-info mb-3">
+          <div class="card-header">Canceled Orders</div>
+          <div class="card-body">
+              <h1 class="card-title"><%= @canceled %></h1>
+          </div>
+      </div>
+  </div>
+</div>
+
 <table class="table table-striped">
   <thead>
     <tr>

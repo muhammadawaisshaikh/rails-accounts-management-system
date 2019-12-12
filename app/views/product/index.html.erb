@@ -1,9 +1,20 @@
-<div class="row">
+<div class="row py-4">
   <div class=" col-md-6 col-12">
-    <h1 class="py-4">All Products</h1>
+    <h1>All Products</h1>
   </div>
   <div class=" col-md-6 col-12">
     <%= render 'searchForm' %>
+  </div>
+</div>
+
+<div class="row border-bottom pb-4">
+  <div class="col-12 col-md-2">
+      <div class="card text-white bg-success mb-3">
+          <div class="card-header">Total Products</div>
+          <div class="card-body">
+              <h1 class="card-title"><%= @all %></h1>
+          </div>
+      </div>
   </div>
 </div>
 
@@ -15,6 +26,7 @@
       <th scope="col">Stock</th>
       <th scope="col">Retail Price</th>
       <th scope="col">Supplier</th>
+      <th scope="col">Supplier Mobile</th>
       <th scope="col">Created at</th>
       <th scope="col">Options</th>
     </tr>
@@ -27,6 +39,7 @@
             <td><%= product.stock %></td>
             <td><%= product.retailPrice %></td>
             <td><%= product.vendor_name %></td>
+            <td><%= product.mobile %></td>
             <td><%= product.created_at %></td>
             <td>
                 <%= link_to edit_product_path(product), class: 'btn btn-info' do %>

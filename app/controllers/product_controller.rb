@@ -10,12 +10,16 @@ class ProductController < ApplicationController
       @vendor_name = @search["vendor_name"]
       @name = @search["name"]
       @vendors = Vendor.select("*").joins(:products).where("vendor_name ILIKE ? AND product_name ILIKE ?", "%#{@vendor_name}%", "%#{@name}%")
+
+      @all = Vendor.select("*").joins(:products).where("vendor_name ILIKE ? AND product_name ILIKE ?", "%#{@vendor_name}%", "%#{@name}%").count;
     end
   end
 
   def index
     @products = Product.all.order(id: :asc)
     @vendors = Vendor.select("*").joins(:products)
+
+    @all = Vendor.select("*").joins(:products).count;
 
     search
   end

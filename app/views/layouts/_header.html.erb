@@ -68,6 +68,19 @@
           <% end %>
         </div>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="paymentDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Payments
+        </a>
+        <div class="dropdown-menu" aria-labelledby="paymentDropdown">
+          <%= link_to payment_index_path, :class => "dropdown-item" do %>
+            <span>All Payments</span>
+          <% end %>
+          <%= link_to new_payment_path, :class => "dropdown-item" do %>
+            <span>Add Payment</span>
+          <% end %>
+        </div>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <%= link_to destroy_admin_session_path, method: :delete, class: 'btn btn-dark' do %>

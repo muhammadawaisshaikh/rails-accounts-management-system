@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   resources :order
   resources :dashboard
   resources :sales
+  resources :payment
   
 end

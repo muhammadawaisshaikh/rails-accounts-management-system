@@ -11,7 +11,7 @@
           <span>Dashboard</span>
         <% end %>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <%= link_to sales_path, :class => "nav-link" do %>
           <span>Sales</span>
         <% end %>
@@ -69,5 +69,10 @@
         </div>
       </li>
     </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <%= link_to destroy_admin_session_path, method: :delete, class: 'btn btn-dark' do %>
+        <span>Logout</span>
+      <% end %>
+    </form>
   </div>
 </nav>

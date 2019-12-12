@@ -1,6 +1,6 @@
 <%= simple_form_for :search, url: payment_index_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-  <%= f.input :vendor_name, input_html: {value: "", placeholder: "Supplier Name", class: 'form-control mx-2'} %>   
-  <%= f.input :name, input_html: {value: "", placeholder: "Product Name", class: 'form-control mx-2'} %>   
+  <%= f.input :to_from, input_html: {value: "", placeholder: "Beneficiary Name", class: 'form-control mx-2'} %>   
+  <%= f.input :status, input_html: {value: "", placeholder: "Debit/Credit", class: 'form-control mx-2'} %>   
   <%= f.submit "Search", class: "btn btn-primary mt-4" %>
   <%= link_to "Clear", payment_index_path, class: 'btn btn-warning mt-4 ml-2' %>
 <% end %>

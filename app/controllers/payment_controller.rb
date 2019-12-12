@@ -1,12 +1,24 @@
 class PaymentController < ApplicationController
 
   def search
+    @search = params["search"]
+    if @search.present?
+      @to_from = @search["to_from"]
+      @status = @search["status"]
+      @payments = Payment.where("to_from ILIKE ? AND status ILIKE ?", "%#{@to_from}%", "%#{@status}%")
+
+      @all = Payment.where("to_from ILIKE ? AND status ILIKE ?", "%#{@to_from}%", "%#{@status}%").count;
+      @allCredit = Payment.select("*").where("to_from ILIKE ? AND status = 'Credit' ", "%#{@to_from}%").count;
+      @allDebit = Payment.select("*").where("to_from ILIKE ? AND status = 'Debit' ", "%#{@to_from}%").count;
+    end
   end
 
   def index
     @payments = Payment.all.order(id: :asc)
 
     @all = Payment.all.count;
+    @allCredit = Payment.all.where(:status => 'Credit').count;
+    @allDebit = Payment.all.where(:status => 'Debit').count;
 
     search    
   end
@@ -51,6 +63,6 @@ class PaymentController < ApplicationController
   private
 
   def params_payment
-    params.require(:payment).permit(:date, :type, :toFrom, :amount, :status)
+    params.require(:payment).permit(:date, :purpose, :to_from, :amount, :status)
   end
 end

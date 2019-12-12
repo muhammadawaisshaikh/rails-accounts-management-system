@@ -49,3 +49,99 @@
         </div>
     </div>
 </div>
+
+<h3 class="py-4"><b>Sales Statistics</b></h3>
+<div class="row justify-content-center border-bottom pb-4">
+    <div class="col-12 col-md-2">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-header">Total Sales</div>
+            <div class="card-body">
+                <h1 class="card-title"><%= @sumTotal %>/-</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-2">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-header">Completed Orders Sales</div>
+            <div class="card-body">
+                <h1 class="card-title"><%= @completedTotal %>/-</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-2">
+        <div class="card text-white bg-secondary mb-3">
+            <div class="card-header">Pending Orders Sales</div>
+            <div class="card-body">
+                <h1 class="card-title"><%= @pendingTotal %>/-</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-2">
+        <div class="card text-white bg-danger mb-3">
+            <div class="card-header">Shipped Orders Sales</div>
+            <div class="card-body">
+                <h1 class="card-title"><%= @shippedTotal %>/-</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-2">
+        <div class="card text-white bg-warning mb-3">
+            <div class="card-header">Return Orders Sales</div>
+            <div class="card-body">
+                <h1 class="card-title"><%= @returnedTotal %>/-</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-2">
+        <div class="card text-white bg-info mb-3">
+            <div class="card-header">Canceled Orders Sales</div>
+            <div class="card-body">
+                <h1 class="card-title"><%= @canceledTotal %>/-</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3 class="py-4"><b>Payments, Suppliers & Products Statistics</b></h3>
+<div class="row border-bottom pb-4">
+  <div class="col-12 col-md-2">
+      <div class="card text-white bg-primary mb-3">
+          <div class="card-header">Total Payments <span class="float-right"><%= @allCount %></span></div>
+          <div class="card-body">
+              <h1 class="card-title"><%= @allSum %>/-</h1>
+          </div>
+      </div>
+  </div>
+  <div class="col-12 col-md-2">
+      <div class="card text-white bg-success mb-3">
+          <div class="card-header">Total Credits <span class="float-right"><%= @allCreditCount %></span></div>
+          <div class="card-body">
+              <h1 class="card-title"><%= @allCreditSum %>/-</h1>
+          </div>
+      </div>
+  </div>
+  <div class="col-12 col-md-2">
+      <div class="card text-white bg-danger mb-3">
+          <div class="card-header">Total Debits <span class="float-right"><%= @allDebitCount %></span></div>
+          <div class="card-body">
+              <h1 class="card-title"><%= @allDebitSum %>/-</h1>
+          </div>
+      </div>
+  </div>
+  <div class="col-12 col-md-2">
+      <div class="card text-white bg-info mb-3">
+          <div class="card-header">Total Suppliers</div>
+          <div class="card-body">
+              <h1 class="card-title"><%= @suppliers %></h1>
+          </div>
+      </div>
+  </div>
+  <div class="col-12 col-md-2">
+      <div class="card text-white bg-secondary mb-3">
+          <div class="card-header">Total Products</div>
+          <div class="card-body">
+              <h1 class="card-title"><%= @products %></h1>
+          </div>
+      </div>
+  </div>
+</div>

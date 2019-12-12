@@ -1,4 +1,8 @@
 class PaymentController < ApplicationController
+
+  def search
+  end
+
   def index
     @payments = Payment.all.order(id: :asc)
 

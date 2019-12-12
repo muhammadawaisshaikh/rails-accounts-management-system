@@ -1,0 +1,26 @@
+<%= form_for :payment, url: payment_path, html: {method: :put} do |form| %>
+    
+    <div class="row pb-4">
+        <div class="col">
+            <%= form.label :date %>
+            <%= form.date_field :date, class: 'form-control' %>
+        </div>
+        <div class="col">
+            <%= form.label :type %>
+            <%= form.text_field :type, class: 'form-control', placeholder: 'Type' %>
+        </div>
+    </div>
+    <div class="row pb-4">
+        <div class="col">
+            <%= form.label :toFrom %>
+            <%= form.text_field :toFrom, class: 'form-control', placeholder: 'Beneficiary' %>
+        </div>
+        <div class="col">
+            <%= form.label :status %>
+            <%= form.select(:status, ['Debit', 'Credit'], {}, { :class => 'form-control' }) %>
+        </div>
+    </div>
+
+    <%= form.submit class: 'btn btn-success', value: 'Update Product' %>
+    <%= link_to "Cancel", payment_index_path, :class=>'btn btn-warning' %>
+<% end %>

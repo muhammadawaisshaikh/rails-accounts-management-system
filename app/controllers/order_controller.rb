@@ -1,14 +1,18 @@
 class OrderController < ApplicationController
 
-  def index
-    @orders = Order.all.order(id: :asc)
-
+  def search
     @search = params["search"]
     if @search.present?
       @mobile = @search["mobile"]
-      @orders = Order.where("mobile ILIKE ?", "%#{@mobile}%")
+      @name = @search["name"]
+      @orders = Order.where("mobile ILIKE ? AND name ILIKE ?", "%#{@mobile}%", "%#{@name}%")
     end
-    
+  end
+
+  def index
+    @orders = Order.all.order(id: :asc)
+
+    search    
   end
 
   def show

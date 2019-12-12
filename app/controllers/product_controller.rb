@@ -4,9 +4,20 @@ class ProductController < ApplicationController
     @vendors = Vendor.all.order(id: :asc)
   end
 
+  def search
+    @search = params["search"]
+    if @search.present?
+      @vendor_name = @search["vendor_name"]
+      @name = @search["name"]
+      @vendors = Vendor.select("*").joins(:products).where("vendor_name ILIKE ? AND product_name ILIKE ?", "%#{@vendor_name}%", "%#{@name}%")
+    end
+  end
+
   def index
     @products = Product.all.order(id: :asc)
     @vendors = Vendor.select("*").joins(:products)
+
+    search
   end
 
   def show

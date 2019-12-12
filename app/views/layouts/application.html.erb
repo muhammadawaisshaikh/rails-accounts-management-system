@@ -10,7 +10,10 @@
   </head>
 
   <body>
-    <%= render "layouts/header" %>
+
+    <% if current_admin %>
+      <%= render "layouts/header" %>
+    <% end %>
     
     <div class="container-fluid">
       <%= yield %>

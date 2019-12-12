@@ -16,6 +16,21 @@ rails new accounting-management-system --database=postgresql
 # rails create DB
 rails db:create
 
+# Model Creation - Devise
+rails generate devise Admin (after this add columns extra in migration to make model as your needs)
+
+# Model Creation - Rolify
+rails g rolify Role Admin (To manage roles)
+
+# Making Views of the Device created model - Device
+rails generate devise:views admins
+
+# Making Controllers of the Device created model - Device
+rails generate devise:controllers admins
+
+# Model Creation Sample (Auto foreign key and association created)
+rails g model Product name:string description:text amount:integer admin:references
+
 # Making Controllers and views with scaffold
 rails g controller super_admin/admin index show new create edit update destroy
 

@@ -1,6 +1,6 @@
 <%= simple_form_for :search, url: order_index_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-  <%= f.input :mobile, input_html: {value: "", placeholder: "Mobile Number", class: 'form-control'} %>   
+  <%= f.input :mobile, input_html: {value: "", placeholder: "Mobile Number", class: 'form-control  mx-2'} %>   
   <%= f.input :name, input_html: {value: "", placeholder: "Order Name", class: 'form-control mx-2'} %>  
-  <%= f.submit "Search", class: "btn btn-primary mt-4 ml-3" %>
-  <%= link_to "Clear", order_index_path, class: 'btn btn-warning mt-4 ml-2' %>
+  <%= f.submit "Search", class: "btn btn-primary ml-3" %>
+  <%= link_to "Clear", order_index_path, class: 'btn btn-warning ml-2' %>
 <% end %>

@@ -1,5 +1,5 @@
 <%= simple_form_for :search, url: sales_path, method: "GET", html: { class: 'form-inline' } do |f| %>
   <%= f.input :vendor_name, input_html: {value: "", class: 'form-control'} %>   
-  <%= f.submit "Search", class: "btn btn-primary mt-4 ml-3" %>
-  <%= link_to "Clear", sales_path, class: 'btn btn-warning mt-4 ml-2' %>
+  <%= f.submit "Search", class: "btn btn-primary ml-3" %>
+  <%= link_to "Clear", sales_path, class: 'btn btn-warning ml-2' %>
 <% end %>

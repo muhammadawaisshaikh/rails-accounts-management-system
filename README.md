@@ -10,6 +10,9 @@ https://medium.com/le-wagon/build-a-simple-search-with-the-simple-form-gem-in-ra
 # Squeel write your Active Record queries with fewer strings, and more Ruby
 https://github.com/activerecord-hackery/squeel
 
+# gem 'by_star' - get records for a particular date range in Active Record
+https://github.com/radar/by_star
+
 # rails new app
 rails new accounting-management-system --database=postgresql
 

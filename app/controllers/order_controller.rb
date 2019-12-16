@@ -16,6 +16,12 @@ class OrderController < ApplicationController
     end
   end
 
+  # maintaining stock by subtracting quantity of order from product stock
+  def maintain_stock(order)
+    product = Product.find(order.product_id)
+    product.update_attributes(:stock => (product.stock - order.quantity))
+  end
+
   def index
     @orders = Order.all.order(id: :asc)
 
@@ -40,6 +46,9 @@ class OrderController < ApplicationController
   def create
     @order = Order.new(params_order)
 
+    # maintaining stock by subtracting quantity of order from product stock
+    maintain_stock(@order)
+
     if @order.save
         redirect_to order_index_path
     else
@@ -53,10 +62,14 @@ class OrderController < ApplicationController
 
   def update
     @order = Order.find(params[:id])
-      if @order.update(params_order)
-        redirect_to order_index_path
-      else
-        render 'edit'
+
+    # maintaining stock by subtracting quantity of order from product stock
+    maintain_stock(@order)
+
+    if @order.update(params_order)
+      redirect_to order_index_path
+    else
+      render 'edit'
     end
   end
 
@@ -69,7 +82,7 @@ class OrderController < ApplicationController
   private
 
   def params_order
-    params.require(:order).permit(:name, :mobile, :amount, :description, :date, :status, :paymentStatus, :product_id, :vendor_id)
+    params.require(:order).permit(:name, :mobile, :quantity, :amount, :description, :date, :status, :paymentStatus, :product_id, :vendor_id)
   end
 
 end

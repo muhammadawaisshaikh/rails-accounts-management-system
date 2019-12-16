@@ -22,6 +22,10 @@
     </div>
     <div class="row pb-4">
         <div class="col">
+            <%= form.label :quantity %>
+            <%= form.text_field :quantity, class: 'form-control', placeholder: 'Quantity' %>
+        </div>
+        <div class="col">
             <%= form.label :date %>
             <%= form.date_field :date, class: 'form-control', placeholder: 'Date' %>
         </div>

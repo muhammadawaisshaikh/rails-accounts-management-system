@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   resources :dashboard
   resources :sales
   resources :payment
+  resources :profit_loss
   
 end

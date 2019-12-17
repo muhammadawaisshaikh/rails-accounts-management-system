@@ -1,0 +1,60 @@
+<div class="row py-4">
+  <div class=" col-md-6 col-12">
+    <h1>Profit & Loss</h1>
+  </div>
+  <div class=" col-md-6 col-12">
+    <%= render 'searchForm' %>
+  </div>
+</div>
+
+<div class="row border-bottom">
+  <div class="col-12 col-md-2">
+      <div class="card text-white bg-success mb-3">
+          <div class="card-header">Profit</div>
+          <div class="card-body">
+              <h1 class="card-title"><%= @profit %></h1>
+          </div>
+      </div>
+  </div>
+  <div class="col-12 col-md-2">
+      <div class="card text-white bg-danger mb-3">
+          <div class="card-header">Loss</div>
+          <div class="card-body">
+              <h1 class="card-title"><%= @loss %></h1>
+          </div>
+      </div>
+  </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Cost Price</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Profit</th>
+      <th scope="col">Date</th>
+      <th scope="col">Status</th>
+      <th scope="col">Payment Status</th>
+      <th scope="col">Created at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+          <th scope="row"><%= order.id %></th>
+          <td><%= order.name %></td>
+          <td><%= order.quantity %></td>
+          <td><%= order.retailPrice %></td>
+          <td><%= order.amount %></td>
+          <td><%= order.amount-(order.quantity*order.retailPrice) %></td>
+          <td><%= order.date %></td>
+          <td><%= order.status %></td>
+          <td><%= order.paymentStatus %></td>
+          <td><%= order.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

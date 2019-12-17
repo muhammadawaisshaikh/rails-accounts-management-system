@@ -3304,3 +3304,121 @@ Migrating to DeviseCreateAdmins (20191212092401)
   ↳ bin/rails:9
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/product" for ::1 at 2019-12-17 23:43:00 +0500
+Started GET "/order" for ::1 at 2019-12-17 23:43:00 +0500
+Started GET "/profit_loss?utf8=%E2%9C%93&search%5Bname%5D=Airpod+2&commit=Search" for ::1 at 2019-12-17 23:43:00 +0500
+  [1m[35m (22.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/aws/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.4/lib/active_record/log_subscriber.rb:98
+  [1m[35m (24.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (24.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/aws/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.4/lib/active_record/log_subscriber.rb:98
+  ↳ /home/aws/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.4/lib/active_record/log_subscriber.rb:98
+Processing by ProfitLossController#index as HTML
+Processing by OrderController#index as HTML
+Processing by ProductController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"name"=>"Airpod 2"}, "commit"=>"Search"}
+  [1m[36mAdmin Load (49.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/aws/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Load (50.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/aws/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Load (50.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/aws/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.4/lib/active_record/log_subscriber.rb:98
+  [1m[35m (108.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  ↳ app/controllers/order_controller.rb:28
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."status" = $1[0m  [["status", "Pending"]]
+  ↳ app/controllers/order_controller.rb:29
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."status" = $1[0m  [["status", "Shipped"]]
+  ↳ app/controllers/order_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."status" = $1[0m  [["status", "Completed"]]
+  ↳ app/controllers/order_controller.rb:31
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."status" = $1[0m  [["status", "Returned"]]
+  ↳ app/controllers/order_controller.rb:32
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."status" = $1[0m  [["status", "Canceled"]]
+  ↳ app/controllers/order_controller.rb:33
+  Rendering order/index.html.erb within layouts/application
+  [1m[35m (201.5ms)[0m  [1m[34mSELECT SUM(amount) FROM "vendors" INNER JOIN "products" ON "products"."vendor_id" = "vendors"."id" INNER JOIN "orders" ON "orders"."product_id" = "products"."id"[0m
+  [1m[35m (202.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "vendors" INNER JOIN "products" ON "products"."vendor_id" = "vendors"."id"[0m
+  ↳ app/controllers/profit_loss_controller.rb:17
+  ↳ app/controllers/product_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("orders"."amount") FROM "orders" WHERE "orders"."status" = $1[0m  [["status", "Completed"]]
+  ↳ app/controllers/profit_loss_controller.rb:18
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM(amount) FROM "vendors" INNER JOIN "products" ON "products"."vendor_id" = "vendors"."id" INNER JOIN "orders" ON "orders"."product_id" = "products"."id" WHERE (orders.status = 'Completed' AND name ILIKE '%Airpod 2%')[0m
+  ↳ app/controllers/profit_loss_controller.rb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM(amount) FROM "vendors" INNER JOIN "products" ON "products"."vendor_id" = "vendors"."id" INNER JOIN "orders" ON "orders"."product_id" = "products"."id" WHERE (orders.status = 'Completed' AND name ILIKE '%Airpod 2%')[0m
+  ↳ app/controllers/profit_loss_controller.rb:10
+  Rendering product/index.html.erb within layouts/application
+  Rendering profit_loss/index.html.erb within layouts/application
+  Rendered product/_searchForm.html.erb (95.0ms)
+  Rendered order/_searchForm.html.erb (215.0ms)
+  Rendered profit_loss/_searchForm.html.erb (88.4ms)
+  [1m[36mVendor Load (2.4ms)[0m  [1m[34mSELECT * FROM "vendors" INNER JOIN "products" ON "products"."vendor_id" = "vendors"."id"[0m
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE (status = 'Completed' AND name ILIKE '%Airpod 2%')[0m
+  ↳ app/views/product/index.html.erb:35
+  Rendered product/index.html.erb within layouts/application (119.7ms)
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" ASC[0m
+  ↳ app/views/order/index.html.erb:78
+  ↳ app/views/profit_loss/index.html.erb:45
+  Rendered order/index.html.erb within layouts/application (388.1ms)
+  Rendered profit_loss/index.html.erb within layouts/application (283.5ms)
+Completed 500 Internal Server Error in 823ms (ActiveRecord: 335.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `retailPrice' for #<Order:0x00007ffaf42ed910>):
+    47:           <th scope="row"><%= order.id %></th>
+    48:           <td><%= order.name %></td>
+    49:           <td><%= order.quantity %></td>
+    50:           <td><%= order.retailPrice %></td>
+    51:           <td><%= order.amount %></td>
+    52:           <td><%= order.amount-(order.quantity*order.retailPrice) %></td>
+    53:           <td><%= order.date %></td>
+  
+app/views/profit_loss/index.html.erb:50:in `block in _app_views_profit_loss_index_html_erb___624447036192325797_47387490168660'
+app/views/profit_loss/index.html.erb:45:in `_app_views_profit_loss_index_html_erb___624447036192325797_47387490168660'
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 2031ms (Views: 1677.8ms | ActiveRecord: 214.6ms)
+
+
+Completed 200 OK in 2027ms (Views: 1493.9ms | ActiveRecord: 310.3ms)
+
+
+Started GET "/profit_loss?utf8=%E2%9C%93&search%5Bname%5D=Airpod+2&commit=Search" for ::1 at 2019-12-17 23:43:55 +0500
+Processing by ProfitLossController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"name"=>"Airpod 2"}, "commit"=>"Search"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/aws/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.4/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM(amount) FROM "vendors" INNER JOIN "products" ON "products"."vendor_id" = "vendors"."id" INNER JOIN "orders" ON "orders"."product_id" = "products"."id"[0m
+  ↳ app/controllers/profit_loss_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("orders"."amount") FROM "orders" WHERE "orders"."status" = $1[0m  [["status", "Completed"]]
+  ↳ app/controllers/profit_loss_controller.rb:18
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM(amount) FROM "vendors" INNER JOIN "products" ON "products"."vendor_id" = "vendors"."id" INNER JOIN "orders" ON "orders"."product_id" = "products"."id" WHERE (orders.status = 'Completed' AND name ILIKE '%Airpod 2%')[0m
+  ↳ app/controllers/profit_loss_controller.rb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM(amount) FROM "vendors" INNER JOIN "products" ON "products"."vendor_id" = "vendors"."id" INNER JOIN "orders" ON "orders"."product_id" = "products"."id" WHERE (orders.status = 'Completed' AND name ILIKE '%Airpod 2%')[0m
+  ↳ app/controllers/profit_loss_controller.rb:10
+  Rendering profit_loss/index.html.erb within layouts/application
+  Rendered profit_loss/_searchForm.html.erb (2.3ms)
+  [1m[36mVendor Load (0.8ms)[0m  [1m[34mSELECT * FROM "vendors" INNER JOIN "products" ON "products"."vendor_id" = "vendors"."id" INNER JOIN "orders" ON "orders"."product_id" = "products"."id" WHERE (orders.status = 'Completed' AND name ILIKE '%Airpod 2%')[0m
+  ↳ app/views/profit_loss/index.html.erb:45
+  Rendered profit_loss/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 64ms (Views: 38.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/profit_loss" for ::1 at 2019-12-17 23:48:34 +0500
+Processing by ProfitLossController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/aws/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.4/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM(amount) FROM "vendors" INNER JOIN "products" ON "products"."vendor_id" = "vendors"."id" INNER JOIN "orders" ON "orders"."product_id" = "products"."id"[0m
+  ↳ app/controllers/profit_loss_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("orders"."amount") FROM "orders" WHERE "orders"."status" = $1[0m  [["status", "Completed"]]
+  ↳ app/controllers/profit_loss_controller.rb:18
+  Rendering profit_loss/index.html.erb within layouts/application
+  Rendered profit_loss/_searchForm.html.erb (3.9ms)
+  [1m[36mVendor Load (0.7ms)[0m  [1m[34mSELECT * FROM "vendors" INNER JOIN "products" ON "products"."vendor_id" = "vendors"."id" INNER JOIN "orders" ON "orders"."product_id" = "products"."id" WHERE (orders.status = 'Completed') ORDER BY "vendors"."id" ASC[0m
+  ↳ app/views/profit_loss/index.html.erb:45
+  Rendered profit_loss/index.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 79ms (Views: 43.9ms | ActiveRecord: 10.7ms)
+
+

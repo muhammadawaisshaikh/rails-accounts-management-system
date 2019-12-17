@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light header">
   <a class="navbar-brand" href="#"><b>Account Management</b></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -14,6 +14,11 @@
       <li class="nav-item">
         <%= link_to sales_path, :class => "nav-link" do %>
           <span>Sales</span>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to profit_loss_index_path, :class => "nav-link" do %>
+          <span>Proit & Loss</span>
         <% end %>
       </li>
       <li class="nav-item dropdown">

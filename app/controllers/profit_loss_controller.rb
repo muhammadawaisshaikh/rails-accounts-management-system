@@ -6,18 +6,26 @@ class ProfitLossController < ApplicationController
       @name = @search["name"]
       @orders = Vendor.select("*").joins(products: [:orders]).where("orders.status = 'Completed' AND name ILIKE ?", "%#{@name}%")
 
-      @profit = Vendor.select("*").joins(products: [:orders]).where("orders.status = 'Completed' AND name ILIKE ?", "%#{@name}%").sum("amount");
-      @loss = Vendor.select("*").joins(products: [:orders]).where("orders.status = 'Completed' AND name ILIKE ?", "%#{@name}%").sum("amount");
+      @profit = 0;
+      @profit1 = Vendor.select("*").joins(products: [:orders]).where("orders.status = 'Completed' AND name ILIKE ?", "%#{@name}%").sum("amount");
     end
+  end
+
+  def profit_calc(orders)
+    @orders.each do |order|
+      @profit = @profit+(order.amount-(order.quantity*order.retailPrice)) 
+    end
+    return @profit
   end
 
   def index
     @orders = Vendor.select("*").joins(products: [:orders]).where("orders.status = 'Completed'").order(id: :asc)
 
-    @profit = Vendor.select("*").joins(products: [:orders]).sum("amount");
-    @loss = Order.where(:status => 'Completed').sum("amount");
+    @profit = 0;
+    @profit1 = Vendor.select("*").joins(products: [:orders]).sum("amount");
 
-    search    
+    search
+    profit_calc(@orders)    
   end
 
   def show

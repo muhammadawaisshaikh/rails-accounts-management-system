@@ -24,7 +24,7 @@ class OrderController < ApplicationController
   end
 
   def index
-    @orders = Order.all.order(id: :asc).paginate(page: params[:page], per_page: 5)
+    @orders = Order.all.order(id: :asc).paginate(page: params[:page], per_page: 10)
 
     @all = Order.all.count;
     @pending = Order.where(:status => 'Pending').count;

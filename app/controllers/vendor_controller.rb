@@ -1,7 +1,7 @@
 class VendorController < ApplicationController
 
   def index
-    @vendors = Vendor.all.order(id: :asc)
+    @vendors = Vendor.all.order(id: :asc).paginate(page: params[:page], per_page: 10)
   end
 
   def show

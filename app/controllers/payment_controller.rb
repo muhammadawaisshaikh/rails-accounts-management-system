@@ -17,7 +17,7 @@ class PaymentController < ApplicationController
   end
 
   def index
-    @payments = Payment.all.order(id: :asc)
+    @payments = Payment.all.order(id: :asc).paginate(page: params[:page], per_page: 10)
 
     @allCount = Payment.all.count;
     @allSum = Payment.all.sum(:amount);

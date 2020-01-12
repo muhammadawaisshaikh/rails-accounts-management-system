@@ -1,6 +1,6 @@
 class SalesController < ApplicationController
   def index
-    @orders = Vendor.select("*").joins(:orders).group('orders.id', 'vendors.id');
+    @orders = Vendor.select("*").joins(:orders).group('orders.id', 'vendors.id').paginate(page: params[:page], per_page: 10);
 
     @sumTotal = Order.sum("amount");
     @completedTotal = Order.where("status = 'Completed'").sum("amount");

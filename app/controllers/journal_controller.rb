@@ -1,6 +1,6 @@
 class JournalController < ApplicationController
   def index
-    @journals = Journal.all.order(id: :asc)
+    @journals = Journal.all.order(id: :asc).paginate(page: params[:page], per_page: 10)
   end
 
   def show

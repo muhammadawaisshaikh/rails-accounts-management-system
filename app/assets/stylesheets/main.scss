@@ -12,3 +12,30 @@ body {
         }
     }
 }
+
+.pagination {
+    font-size: 12px;
+    > * {
+        margin-right: 0.1em;
+        padding: 5px 15px;
+        font-size: 15px;
+        border-radius: 5px;
+    }
+    a {
+        text-decoration: none;
+        &:hover {
+            background: #007bff none repeat scroll 0 0;
+            color: #ffffff;
+        }
+        &:active {
+            text-shadow: none;
+        }
+    }
+    .current {
+        background: #007bff none repeat scroll 0 0;
+        color: white;
+    }
+    .disabled {
+        color: #C0C0C0;
+    }
+}

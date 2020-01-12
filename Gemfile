@@ -38,6 +38,8 @@ gem 'simple_form'
 
 gem 'devise'
 
+gem 'will_paginate', '~> 3.1.0'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 

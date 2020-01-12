@@ -1,4 +1,5 @@
 class OrderController < ApplicationController
+  include OrderHelper
 
   def search
     @search = params["search"]
@@ -32,7 +33,7 @@ class OrderController < ApplicationController
     @returned = Order.where(:status => 'Returned').count;
     @canceled = Order.where(:status => 'Canceled').count;
 
-    search    
+    search
   end
 
   def show

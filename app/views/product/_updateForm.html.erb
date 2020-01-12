@@ -17,7 +17,7 @@
         </div>
         <div class="col">
             <%= form.label :vendor_id %>
-            <%= form.text_field :vendor_id, class: 'form-control', placeholder: 'Vendor Id' %>
+            <%= form.select(:vendor_id, vendor_for_select, {}, { :class => 'form-control' }) %>
         </div>
     </div>
 

@@ -1,4 +1,5 @@
 class ProductController < ApplicationController
+  include ProductHelper
 
   def get_vendors
     @vendors = Vendor.all.order(id: :asc)

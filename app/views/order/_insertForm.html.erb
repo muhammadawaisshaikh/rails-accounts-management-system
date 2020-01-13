@@ -16,8 +16,8 @@
             <%= form.text_field :amount, class: 'form-control', placeholder: 'Amount #' %>
         </div>
         <div class="col">
-            <%= form.label :description %>
-            <%= form.text_field :description, class: 'form-control', placeholder: 'Description' %>
+            <%= form.label :address %>
+            <%= form.text_field :address, class: 'form-control', placeholder: 'Description' %>
         </div>
     </div>
     <div class="row pb-4">
@@ -42,10 +42,6 @@
         <div class="col">
             <%= form.label :product_id %>
             <%= form.select(:product_id, products_for_select, {}, { :class => 'form-control' }) %>
-        </div>
-        <div class="col">
-            <%= form.label :vendor_id %>
-            <%= form.select(:vendor_id, vendor_for_select, {}, { :class => 'form-control' }) %>
         </div>
     </div>
 

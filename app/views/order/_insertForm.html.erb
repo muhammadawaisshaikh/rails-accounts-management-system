@@ -43,6 +43,10 @@
             <%= form.label :product_id %>
             <%= form.select(:product_id, products_for_select, {}, { :class => 'form-control' }) %>
         </div>
+        <div class="col">
+            <%= form.label :tracking_code %>
+            <%= form.text_field :tracking_code, class: 'form-control', placeholder: 'Tracking Code' %>
+        </div>
     </div>
 
     <%= form.submit class: 'btn btn-success', value: 'Add New' %>

@@ -61,3 +61,7 @@ end
 # simple_form Gem in Rails 5
 https://medium.com/le-wagon/build-a-simple-search-with-the-simple-form-gem-in-rails-5-b247168282d1
 https://github.com/plataformatec/simple_form
+
+# excel sheet import
+https://github.com/mattnedrich/ruby-excel-library-examples
+https://github.com/roo-rb/roo

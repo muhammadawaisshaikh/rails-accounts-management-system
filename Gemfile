@@ -35,10 +35,9 @@ gem 'jbuilder', '~> 2.5'
 
 # Search
 gem 'simple_form'
-
 gem 'devise'
-
 gem 'will_paginate', '~> 3.1.0'
+gem "roo", "~> 2.8.0"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

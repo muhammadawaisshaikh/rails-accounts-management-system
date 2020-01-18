@@ -34,6 +34,8 @@ class OrderController < ApplicationController
     @canceled = Order.where(:status => 'Canceled').count;
 
     search
+    @path_sheet = "app/excel-sheet/orders.xlsx";
+    read_excel_sheet(@path_sheet)
   end
 
   def show

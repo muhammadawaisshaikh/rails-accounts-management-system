@@ -41,7 +41,8 @@
         </div>
         <div class="col">
             <%= form.label :product_id %>
-            <%= form.select(:product_id, products_for_select, {}, { :class => 'form-control' }) %>
+            <%# <%= form.select(:product_id, products_for_select, {}, { :class => 'form-control' }) %> %>
+            <%= form.text_field :product_id, class: 'form-control', placeholder: 'product id' %>
         </div>
         <div class="col">
             <%= form.label :tracking_code %>

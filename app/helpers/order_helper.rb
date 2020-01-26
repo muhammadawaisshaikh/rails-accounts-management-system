@@ -2,7 +2,7 @@ module OrderHelper
     require 'roo'
 
     def products_for_select
-        Product.all.collect { |p| [p.product_name, p.id] }
+        Product.all.collect { |p| [p.product_name, p.id] if p.stock>0}.compact
     end
 
     def vendor_for_select

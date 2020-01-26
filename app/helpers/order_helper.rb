@@ -16,7 +16,7 @@ module OrderHelper
         puts xlsx.info
         # => Returns basic info about the spreadsheet file
 
-        sheet = xlsx.sheet('Leopard')
+        sheet = xlsx.sheet('qwer')
         puts sheet.column(1)
     end
     

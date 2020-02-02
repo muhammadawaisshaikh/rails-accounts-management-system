@@ -19,7 +19,7 @@ class ProfitLossController < ApplicationController
   end
 
   def index
-    @orders = Vendor.select("*").joins(products: [:orders]).where("orders.status = 'Completed'").order(id: :asc).paginate(page: params[:page], per_page: 10)
+    @orders = Vendor.select("*").joins(products: [:orders]).where("orders.status = 'Completed'").order(id: :asc).paginate(page: params[:page], per_page: 20)
 
     @profit = 0;
     @profit1 = Vendor.select("*").joins(products: [:orders]).sum("amount");

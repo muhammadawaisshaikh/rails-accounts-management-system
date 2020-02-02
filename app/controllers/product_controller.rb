@@ -17,8 +17,8 @@ class ProductController < ApplicationController
   end
 
   def index
-    @products = Product.all.order(id: :asc).paginate(page: params[:page], per_page: 10)
-    @vendors = Vendor.select("*").joins(:products).paginate(page: params[:page], per_page: 10)
+    @products = Product.all.order(id: :asc).paginate(page: params[:page], per_page: 20)
+    @vendors = Vendor.select("*").joins(:products).paginate(page: params[:page], per_page: 20)
 
     @all = Vendor.select("*").joins(:products).count;
 

@@ -1,6 +1,6 @@
 <div class="row py-4">
   <div class=" col-md-6 col-12">
-    <h1><b>Sales W.R.T Suppliers</b></h1>
+    <h1><b>Sales W.R.T Products</b></h1>
   </div>
   <div class=" col-md-6 col-12">
     <%= render 'searchForm' %>
@@ -67,7 +67,7 @@
       <th scope="col">Quantity</th>
       <th scope="col">Amount</th>
       <th scope="col">Description</th>
-      <th scope="col">Vendor</th>
+      <th scope="col">Product</th>
       <th scope="col">Date</th>
       <th scope="col">Status</th>
       <th scope="col">Payment Status</th>
@@ -82,8 +82,8 @@
             <td><%= order.mobile %></td>
             <td><%= order.quantity %></td>
             <td><%= order.amount %></td>
-            <td><%= order.description %></td>
-            <td><%= order.vendor_name %></td>
+            <td><%= order.address %></td>
+            <td><%= order.product_name %></td>
             <td><%= order.date %></td>
             <td><%= order.status %></td>
             <td><%= order.paymentStatus %></td>

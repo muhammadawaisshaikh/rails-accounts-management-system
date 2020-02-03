@@ -11,6 +11,18 @@ class ProfitLossController < ApplicationController
     end
   end
 
+  def date_wise
+    @date_search = params["date_wise"]
+    if @date_search.present?
+      @date_from = @date_search["date_from"]
+      @date_to = @date_search["date_to"]
+      
+      @orders = Vendor.select("*").joins(products: [:orders]).where(:created_at => @date_from..@date_to)
+      @profit = 0;
+      @profit1 = Vendor.select("*").joins(products: [:orders]).where(:created_at => @date_from..@date_to).sum("amount");
+    end
+  end
+
   def profit_calc(orders)
     @orders.each do |order|
       @profit = @profit+(order.amount-(order.quantity*order.retailPrice)) 
@@ -25,6 +37,7 @@ class ProfitLossController < ApplicationController
     @profit1 = Vendor.select("*").joins(products: [:orders]).sum("amount");
 
     search
+    date_wise
     profit_calc(@orders)    
   end
 

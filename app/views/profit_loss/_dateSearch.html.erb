@@ -1,0 +1,7 @@
+<%= simple_form_for :date_wise, url: profit_loss_index_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+    <%= f.date_field :date_from, class: 'form-control', placeholder: 'Date' %>
+    <%= f.date_field :date_to, class: 'form-control', placeholder: 'Date' %>
+
+    <%= f.submit "Search", class: "btn btn-primary ml-3" %>
+    <%= link_to "Clear", profit_loss_index_path, class: 'btn btn-warning ml-2' %>
+  <% end %>

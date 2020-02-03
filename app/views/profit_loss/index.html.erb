@@ -1,9 +1,12 @@
 <div class="row py-4">
-  <div class=" col-md-6 col-12">
+  <div class=" col-md-3 col-12">
     <h1>Profit & Loss</h1>
   </div>
-  <div class=" col-md-6 col-12">
+  <div class=" col-md-3 col-12">
     <%= render 'searchForm' %>
+  </div>
+  <div class=" col-md-6 col-12">
+    <%= render 'dateSearch' %>
   </div>
 </div>
 
@@ -50,5 +53,3 @@
       <% end %>
   </tbody>
 </table>
-
-<%= will_paginate @orders %>

@@ -4,7 +4,7 @@ class ProfitLossController < ApplicationController
     if @search.present?
       @mobile = @search["mobile"]
       @name = @search["name"]
-      @orders = Vendor.select("*").joins(products: [:orders]).where("orders.status = 'Completed' AND name ILIKE ?", "%#{@name}%")
+      @orders = Vendor.select("*").joins(products: [:orders]).where("orders.status = 'Completed' AND name ILIKE ?", "%#{@name}%").paginate(page: params[:page], per_page: 20)
 
       @profit = 0;
       @profit1 = Vendor.select("*").joins(products: [:orders]).where("orders.status = 'Completed' AND name ILIKE ?", "%#{@name}%").sum("amount");
@@ -17,9 +17,9 @@ class ProfitLossController < ApplicationController
       @date_from = @date_search["date_from"]
       @date_to = @date_search["date_to"]
       
-      @orders = Vendor.select("*").joins(products: [:orders]).where(:created_at => @date_from..@date_to)
+      @orders = Product.select("*").joins(:orders).where(:created_at => @date_from..@date_to).paginate(page: params[:page], per_page: 20)
       @profit = 0;
-      @profit1 = Vendor.select("*").joins(products: [:orders]).where(:created_at => @date_from..@date_to).sum("amount");
+      @profit1 = Product.select("*").joins(:orders).where(:created_at => @date_from..@date_to).sum("amount");
     end
   end
 

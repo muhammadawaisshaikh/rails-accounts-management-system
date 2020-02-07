@@ -30,10 +30,9 @@
       <th scope="col">Cost Price</th>
       <th scope="col">Sale Price</th>
       <th scope="col">Profit</th>
-      <th scope="col">Date</th>
       <th scope="col">Status</th>
       <th scope="col">Payment Status</th>
-      <th scope="col">Created at</th>
+      <th scope="col">Date</th>
     </tr>
   </thead>
   <tbody>
@@ -45,10 +44,9 @@
         <td><%= order.retailPrice %></td>
         <td><%= order.amount %></td>
         <td><%= order.amount-(order.quantity*order.retailPrice) %></td>
-        <td><%= order.date %></td>
         <td><%= order.status %></td>
         <td><%= order.paymentStatus %></td>
-        <td><%= order.created_at %></td>
+        <td><%= order.date %></td>
       </tr>
       <% end %>
   </tbody>

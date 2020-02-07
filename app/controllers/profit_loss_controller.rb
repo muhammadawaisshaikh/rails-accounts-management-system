@@ -17,9 +17,9 @@ class ProfitLossController < ApplicationController
       @date_from = @date_search["date_from"]
       @date_to = @date_search["date_to"]
       
-      @orders = Product.select("*").joins(:orders).where(:created_at => @date_from..@date_to).paginate(page: params[:page], per_page: 20)
+      @orders = Product.select("*").joins(:orders).where('orders.date' => @date_from..@date_to).paginate(page: params[:page], per_page: 20)
       @profit = 0;
-      @profit1 = Product.select("*").joins(:orders).where(:created_at => @date_from..@date_to).sum("amount");
+      @profit1 = Product.select("*").joins(:orders).where('orders.date' => @date_from..@date_to).sum("amount");
     end
   end
 
